@@ -4,386 +4,260 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>AnonymAdvice — Honest advice, privately</title>
-  <meta name="description" content="Get honest, compassionate advice. Stay anonymous. Choose free AI advice or paid personalized human advice." />
-  <meta property="og:title" content="AnonymAdvice — Honest advice, privately" />
-  <meta property="og:description" content="Stay anonymous. Get advice by AI (free) or from a human (paid)." />
-  <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#111827" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💬</text></svg>">
   <style>
-    :root {
-      --bg: #0f172a; /* slate-900 */
-      --panel: #0b1224;
-      --text: #e5e7eb; /* zinc-200 */
-      --muted: #9ca3af; /* gray-400 */
-      --brand: #fbbf24; /* amber-400 */
-      --brand-strong: #f59e0b; /* amber-500 */
-      --border: #1f2937; /* gray-800 */
-      --ok: #22c55e;
-      --warn: #fb923c;
-      --error: #ef4444;
-    }
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      margin: 0;
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(1200px 600px at 10% -10%, rgba(251,191,36,.15), transparent 60%),
-        radial-gradient(1000px 500px at 120% -20%, rgba(245,158,11,.12), transparent 60%),
-        var(--bg);
-      line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
-    }
-    .container {
-      max-width: 880px;
-      margin: 0 auto;
-      padding: 32px 20px 80px;
-    }
-    header {
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 16px; padding: 16px 0 8px; border-bottom: 1px solid var(--border);
-    }
-    .brand { display:flex; align-items:center; gap:12px; text-decoration:none; color:var(--text);}
-    .logo {
-      width: 42px; height: 42px; border-radius: 12px;
-      display:grid; place-items:center;
-      background: linear-gradient(135deg, rgba(251,191,36,.2), rgba(245,158,11,.1));
-      border: 1px solid var(--border);
-    }
-    h1 { margin: 12px 0 8px; font-size: clamp(26px, 3vw, 36px); letter-spacing: 0.2px;}
-    .sub { color: var(--muted); margin: 0 0 18px; }
-    .hero {
-      display: grid; gap: 16px; padding: 20px 0 26px;
-    }
-    .grid {
-      display: grid; gap: 18px;
-      grid-template-columns: 1fr;
-    }
-    @media (min-width: 840px) {
-      .grid { grid-template-columns: 1.1fr .9fr; }
-    }
-    .card {
-      border: 1px solid var(--border);
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-radius: 16px;
-      padding: 18px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    }
-    .muted { color: var(--muted); font-size: 0.95rem; }
-    label { display: block; font-weight: 600; margin: 10px 0 6px; }
-    input[type="text"], input[type="email"], textarea, select {
-      width: 100%; border: 1px solid var(--border); border-radius: 12px;
-      background: #0b132b; color: var(--text); padding: 12px 13px; outline: none;
-      transition: border .15s ease;
-    }
-    textarea { min-height: 140px; resize: vertical; }
-    input:focus, textarea:focus, select:focus { border-color: var(--brand); }
-    .hint { font-size: .88rem; color: var(--muted); margin-top: 4px; }
-    .row { display:grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
-    button, .button {
-      appearance: none; border: 1px solid transparent; cursor: pointer;
-      border-radius: 12px; padding: 12px 16px; font-weight: 700;
-      background: linear-gradient(180deg, var(--brand), var(--brand-strong));
-      color: #1f2937; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
-      box-shadow: 0 8px 20px rgba(245,158,11,0.35);
-    }
-    .button.secondary {
-      background: #0b132b; color: var(--text); border-color: var(--border);
-      box-shadow: none;
-    }
-    .pill {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-size: .9rem; padding: 6px 10px; border-radius: 999px;
-      border: 1px solid var(--border); background: rgba(255,255,255,0.03);
-      color: var(--muted);
-    }
-    .steps { display:grid; gap:10px; margin-top: 12px; }
-    .step { display:flex; gap:12px; align-items:flex-start; }
-    .step .num {
-      width: 26px; height: 26px; border-radius: 999px; display:grid; place-items:center;
-      background: rgba(251,191,36,0.15); border: 1px solid var(--border); color: var(--brand);
-      font-weight: 800; font-size: .9rem;
-    }
-    .status {
-      margin-top: 12px; border-radius: 12px; border:1px solid var(--border);
-      padding: 12px; font-size: .95rem; background: #0b132b;
-    }
-    .status.ok { border-color: rgba(34,197,94,.3); }
-    .status.warn { border-color: rgba(251,146,60,.3); }
-    .status.err { border-color: rgba(239,68,68,.3); }
-    footer {
-      margin-top: 30px; padding-top: 18px; border-top: 1px solid var(--border);
-      color: var(--muted); font-size: .92rem;
-    }
-    small code { background: rgba(250, 250, 250, .05); padding: 2px 6px; border-radius: 6px; }
+    body { font-family: Arial, sans-serif; background:#151b2b; color:#e5e7eb; margin:0; }
+    .container { max-width:720px; margin:auto; padding:20px; }
+    h1 { color:#fbbf24; }
+    .card { background:#182144; padding:22px; border-radius:12px; margin-bottom:22px; box-shadow:0 2px 8px #0002; }
+    label { display:block; margin-top:10px; }
+    select, textarea, input { width:100%; padding:10px; margin-top:5px; border-radius:8px; border:1px solid #32436e; background:#212752; color:#e5e7eb; }
+    button { margin-top:17px; padding:12px 18px; border:none; border-radius:8px; background:#ffe070; color:#222c46; font-weight:bold; cursor:pointer; }
+    .status { margin-top:10px; padding:12px; border-radius:8px; background:#212752; }
+    .ok { border:1.5px solid #22c55e; }
+    .err { border:1.5px solid #ef4444; }
+    .warn { border:1.5px solid #fb923c; }
+    .note { font-size:15px; color:#eab308; margin-bottom:16px;}
+    a.button { display:inline-block; margin-top:10px; padding:10px 14px; border-radius:8px; background:#212752; color:#ffd94d; text-decoration:none; border:1px solid #fbbf24; }
+    @media (max-width:600px){ .container {padding:6px;} }
   </style>
 </head>
 <body>
   <div class="container">
-    <header>
-      <a href="#" class="brand" aria-label="AnonymAdvice home">
-        <div class="logo" aria-hidden="true">💬</div>
-        <div>
-          <strong style="font-size:1.05rem; letter-spacing:.3px;">AnonymAdvice</strong><br>
-          <span class="muted">Honest advice, privately — AI or human</span>
-        </div>
-      </a>
-      <span class="pill">No sign-up • Stay anonymous</span>
-    </header>
+    <h1>Get honest advice — stay anonymous.</h1>
+    <p class="note">Free instant AI advice, or personalized human reply for deeper support (paid). Your privacy, empathy, and trust matter.</p>
+    <div class="card">
+      <form id="adviceForm">
+        <label for="topic">Topic</label>
+        <select id="topic" required>
+          <option value="" disabled selected>Select</option>
+          <option>Life & direction</option>
+          <option>Stress & anxiety</option>
+          <option>Work & career</option>
+          <option>Relationships</option>
+          <option>Health & habits</option>
+          <option>Loss & grief</option>
+          <option>PhD / academic stress</option>
+          <option>Loneliness</option>
+          <option>Motivation</option>
+          <option>Decision-making</option>
+          <option>Self-esteem</option>
+          <option>Other</option>
+        </select>
 
-    <section class="hero">
-      <h1>Get honest advice. Stay anonymous.</h1>
-      <p class="sub">Share your situation without revealing your identity. Receive an instant AI reflection (free) or a personal human reply (paid).</p>
-    </section>
+        <label for="message">Your situation (feel free to be open)</label>
+        <textarea id="message" required placeholder="Briefly describe what's happening, e.g., 'I'm feeling anxious about my thesis...'" rows="4"></textarea>
 
-    <section class="grid" aria-label="Main content">
-      <!-- Left: Form -->
-      <div class="card">
-        <h2 style="margin:0 0 6px;">Tell us what’s on your mind</h2>
-        <p class="muted" style="margin:0 0 8px;">No real name required. Use any email (or a burner email) for replies.</p>
+        <label for="mood">Mood</label>
+        <select id="mood">
+          <option>Neutral</option>
+          <option>Confused</option>
+          <option>Anxious</option>
+          <option>Sad</option>
+          <option>Angry</option>
+          <option>Hopeful</option>
+          <option>Lost</option>
+          <option>Lonely</option>
+        </select>
 
-        <form id="adviceForm" novalidate>
-          <label for="topic">What do you want advice about?</label>
-          <select id="topic" name="topic" required>
-            <option value="" disabled selected>Select a topic</option>
-            <option>Life & direction</option>
-            <option>Stress & anxiety</option>
-            <option>Work & career</option>
-            <option>Relationships</option>
-            <option>Health & habits</option>
-            <option>Other</option>
-          </select>
-          <div class="hint">Choose the closest topic — it helps tailor your advice.</div>
+        <label for="email">Email (for human reply, optional)</label>
+        <input type="email" id="email" placeholder="your@email.com" />
 
-          <label for="message">Describe your situation (anonymous)</label>
-          <textarea id="message" name="message" placeholder="Write a few lines…" required></textarea>
+        <label for="mode">Advice type</label>
+        <select id="mode" required>
+          <option value="" disabled selected>Select</option>
+          <option value="ai">Free — AI advice (instant)</option>
+          <option value="human10">Paid — Human advice (€10, email reply)</option>
+        </select>
 
-          <div class="row">
-            <div>
-              <label for="mood">How do you feel?</label>
-              <select id="mood" name="mood">
-                <option>Neutral</option>
-                <option>Confused</option>
-                <option>Anxious</option>
-                <option>Sad</option>
-                <option>Angry</option>
-                <option>Hopeful</option>
-              </select>
-            </div>
-            <div>
-              <label for="email">Email to receive reply (optional for AI)</label>
-              <input type="email" id="email" name="email" placeholder="your@email.com" />
-            </div>
-          </div>
+        <button type="submit">Get Advice</button>
+      </form>
 
-          <label for="mode">Choose how to receive advice</label>
-          <select id="mode" name="mode" required>
-            <option value="" disabled selected>Select</option>
-            <option value="ai">Free — AI advice (instant)</option>
-            <option value="human">Paid — Human advice (within 24h)</option>
-          </select>
+      <div id="status" class="status" style="display:none;"></div>
 
-          <div class="actions">
-            <button type="submit">Get Advice</button>
-            <a id="payStripe" class="button secondary" href="#" target="_blank" rel="noopener" style="display:none">Pay with Stripe</a>
-            <a id="payPayPal" class="button secondary" href="#" target="_blank" rel="noopener" style="display:none">Pay with PayPal</a>
-          </div>
-
-          <div id="status" class="status" role="status" aria-live="polite" style="display:none;"></div>
-        </form>
-
-        <div id="aiResult" class="card" style="margin-top:14px; display:none;">
-          <strong>AI Reflection</strong>
-          <p id="aiText" style="margin:6px 0 0;"></p>
-        </div>
-
-        <div id="mailtoBlock" class="card" style="margin-top:14px; display:none;">
-          <strong>Send your request</strong>
-          <p class="muted" style="margin:6px 0 8px;">
-            After completing payment, click the button below to open your email app with your request pre-filled. You may use a burner email if you prefer.
-          </p>
-          <div class="actions">
-            <a id="mailtoBtn" class="button" href="#">Open Email to Send</a>
-          </div>
-          <p class="hint">We’ll reply within 24 hours. If you don’t receive a reply, check your spam folder.</p>
-        </div>
+      <div id="aiResult" class="card" style="display:none;">
+        <strong>AI Reflection</strong>
+        <p id="aiText"></p>
+        <small style="color:#ffe38d;">For urgent or sensitive situations, consider also asking for a personal human reply.</small>
       </div>
 
-      <!-- Right: How it works / Pricing -->
-      <div class="card" aria-label="How it works">
-        <h3 style="margin-top:0;">How it works</h3>
-        <div class="steps">
-          <div class="step">
-            <div class="num">1</div>
-            <div>
-              <strong>Share anonymously</strong>
-              <div class="muted">No real name needed. Use any email or a burner address.</div>
-            </div>
-          </div>
-          <div class="step">
-            <div class="num">2</div>
-            <div>
-              <strong>Choose AI or Human</strong>
-              <div class="muted">Instant AI reflection (free) or a thoughtful human reply (paid).</div>
-            </div>
-          </div>
-          <div class="step">
-            <div class="num">3</div>
-            <div>
-              <strong>Receive your advice</strong>
-              <div class="muted">On-page for AI; by email for human replies (within 24 hours).</div>
-            </div>
-          </div>
-        </div>
-
-        <hr style="border:0; border-top:1px solid var(--border); margin:16px 0;">
-        <h3>Pricing</h3>
-        <ul class="muted" style="margin:8px 0 0; padding-left:18px;">
-          <li><strong>AI (free):</strong> instant, reflective message on this page.</li>
-          <li><strong>Human (€10):</strong> 2–3 paragraphs tailored to your situation.</li>
-          <li><strong>Human+ (€25):</strong> deeper analysis + practical steps.</li>
-        </ul>
-
-        <hr style="border:0; border-top:1px solid var(--border); margin:16px 0;">
-        <h3>Privacy & disclaimer</h3>
-        <p class="muted">
-          Your messages are confidential and handled with care. We don’t sell data. This service provides general life guidance — it is not medical, legal, or financial advice.
-        </p>
+      <div id="paymentOptions" style="display:none;">
+        <p><strong>Step 1 — Complete payment (€10)</strong></p>
+        <a id="payPayPal" class="button" href="#" target="_blank">Pay €10 with PayPal</a>
       </div>
-    </section>
 
-    <footer>
-      <div>© <span id="year"></span> AnonymAdvice. All rights reserved.</div>
-      <div style="margin-top:6px;">Questions? Email <a href="mailto:contact@anonymadvice.com">contact@anonymadvice.com</a>. • <span class="muted">Made with empathy.</span></div>
-    </footer>
+      <div id="mailtoBlock" class="card" style="display:none;">
+        <strong>Step 2 — Send your request (after payment)</strong>
+        <p>After paying, click below to open your email app with your request pre-filled for a confidential reply.</p>
+        <a id="mailtoBtn" class="button" href="#">Open Email to Send</a>
+      </div>
+    </div>
+
+    <div style="margin-top:25px;font-size:13px;color:#a3a3a3;">
+      <p>We never store your emails, payments are handled via PayPal. For immediate external crisis support, contact a professional.</p>
+    </div>
   </div>
 
   <script>
-    // ==========================
-    // CONFIG — customize this
-    // ==========================
-    const CONFIG = {
-      OWNER_EMAIL: "you@example.com", // where human requests will be sent
-      STRIPE_CHECKOUT_URL: "https://your-stripe-checkout-link.example", // replace with real Stripe link
-      PAYPAL_ME_URL: "https://www.paypal.com/paypalme/yourname/10",     // replace with your PayPal.me (amount optional)
-      BRAND_NAME: "AnonymAdvice"
-    };
+    document.addEventListener("DOMContentLoaded", () => {
+      const CONFIG = {
+        OWNER_EMAIL: "contact@anonymadvice.com",  // where you receive the requests
+        PAYPAL_URL_10: "https://www.paypal.com/ncp/payment/DYJF6RCXMV8YJ",
+        BRAND_NAME: "AnonymAdvice"
+      };
 
-    // Simple AI reflections (client-side) to simulate instant advice.
-    const AI_SNIPPETS = [
-      "Take one small step in the direction that scares you but moves you toward what matters. Clarity often follows action.",
-      "Your feelings are data, not destiny. Name the feeling, then choose the smallest kind action you can take next.",
-      "If you can’t decide, ask: which choice respects my values tomorrow, not just my comfort today?",
-      "Set a 7-day experiment. For one week, try the habit you wish you had, and observe without judging.",
-      "Write the outcome you fear most and how you would handle it. Fear shrinks when you have a plan.",
-      "Boundaries are bridges to better relationships. State your need simply, kindly, and once."
-    ];
+      const AI_RESPONSES = {
+        "Life & direction": [
+          "When feeling lost, write down three values that matter most. Choices become clearer when aligned with values.",
+          "Life direction often emerges from small experiments. Take one step toward curiosity, not certainty.",
+          "Everyone faces crossroads. Courage is often following what matters, not what's easiest.",
+          "Try imagining your best friend giving you advice on this — what would they say?",
+        ],
+        "Stress & anxiety": [
+          "Stress shrinks when broken into smaller tasks. Write down one thing you can finish today.",
+          "Anxiety often signals care. Ask: what matters so much that it makes me anxious?",
+          "Breathe out slowly; notice the smallest thing you control right now.",
+          "You’re not your thoughts — if they’re racing, try writing them down.",
+        ],
+        "Work & career": [
+          "Career growth is rarely linear. Think in seasons: some are for learning, others for advancing.",
+          "If stuck, ask: what skill could I build in the next 30 days that future-you will thank you for?",
+          "Consider small wins over big leaps. Start with one step.",
+        ],
+        "Relationships": [
+          "Healthy relationships thrive on boundaries. State your needs kindly, and listen openly.",
+          "Connection comes from sharing feelings, not just facts.",
+          "Disagreements aren’t failures — they’re moments to build understanding.",
+        ],
+        "Health & habits": [
+          "Habits stick when tied to identity. Instead of 'I want to run,' say 'I’m becoming a runner.'",
+          "Start with the smallest version of the habit. One push-up, one glass of water.",
+          "If you miss a day, start again, gently.",
+        ],
+        "Loss & grief": [
+          "Grief is love with nowhere to go. Let yourself feel, honor memories in small rituals.",
+          "Healing doesn’t mean forgetting. Carry love forward, learn to live again.",
+          "You are allowed to feel sadness and hope at the same time.",
+        ],
+        "PhD / academic stress": [
+          "PhD journeys are marathons, not sprints. Break tasks into milestones, celebrate progress.",
+          "Stress eases when you focus on what's within control: today's reading, today's writing.",
+          "Academic pressure is real; take breaks, ask for help if stuck.",
+        ],
+        "Loneliness": [
+          "Loneliness is a signal, not a verdict. Try reaching out, even for a brief chat.",
+          "You are not alone in feeling this way. Small acts of connection help.",
+          "Consider joining a group or forum, even anonymously.",
+        ],
+        "Motivation": [
+          "Motivation ebbs and flows. Try starting even when you don’t feel ready.",
+          "A tiny start is better than over-preparing. One minute counts.",
+          "Remember why you began — write your reason.",
+        ],
+        "Decision-making": [
+          "List your choices, write their pros/cons. Then trust your gut after sleeping on it.",
+          "No decision is permanent — most things can be changed.",
+        ],
+        "Self-esteem": [
+          "Self-worth isn't a grade. Try listing three things you did well this week.",
+          "You deserve kindness; treat yourself as you treat a friend.",
+        ],
+        "Other": [
+          "Every situation carries a lesson. Ask: what is this teaching me about myself?",
+          "Uncertainty is the birthplace of possibility. Lean into curiosity.",
+        ]
+      };
 
-    const $ = (sel) => document.querySelector(sel);
-    const statusEl = $("#status");
-    const payStripe = $("#payStripe");
-    const payPayPal = $("#payPayPal");
-    const mailtoBlock = $("#mailtoBlock");
-    const mailtoBtn = $("#mailtoBtn");
-    const aiResult = $("#aiResult");
-    const aiText = $("#aiText");
+      const MOOD_TIPS = {
+        "Confused": "Confusion means you're searching for meaning. Take the next small step, not the perfect step.",
+        "Anxious": "Anxiety signals you care about something important to you.",
+        "Sad": "Sadness is a part of healing. Try one gentle act for yourself today.",
+        "Angry": "Anger protects boundaries. Name it, then calmly share your needs.",
+        "Hopeful": "Hope is the fuel for change. List what you want to rebuild or grow.",
+        "Lost": "Feeling lost isn't failure — it's the start of discovery.",
+        "Lonely": "Loneliness asks for connection. Reach for support, even a tiny step.",
+        "Neutral": "Let yourself feel whatever comes; it's normal to be uncertain.",
+      };
 
-    document.getElementById("year").textContent = new Date().getFullYear();
+      const statusEl = document.getElementById("status");
+      const aiResult = document.getElementById("aiResult");
+      const aiText = document.getElementById("aiText");
+      const mailtoBlock = document.getElementById("mailtoBlock");
+      const mailtoBtn = document.getElementById("mailtoBtn");
+      const payPayPal = document.getElementById("payPayPal");
+      const paymentOptions = document.getElementById("paymentOptions");
 
-    // Handle mode change to show/hide payment buttons
-    $("#mode").addEventListener("change", (e) => {
-      const mode = e.target.value;
-      if (mode === "human") {
-        payStripe.href = CONFIG.STRIPE_CHECKOUT_URL;
-        payPayPal.href = CONFIG.PAYPAL_ME_URL;
-        payStripe.style.display = "inline-flex";
-        payPayPal.style.display = "inline-flex";
-        status("For human replies: please complete payment, then submit your request or email us via the button below.", "warn");
-        mailtoBlock.style.display = "block";
-        aiResult.style.display = "none";
-      } else {
-        payStripe.style.display = "none";
-        payPayPal.style.display = "none";
-        mailtoBlock.style.display = "none";
-        status("", "");
+      function status(msg, type) {
+        if (!msg) { statusEl.style.display="none"; return; }
+        statusEl.style.display="block";
+        statusEl.textContent = msg;
+        statusEl.className = "status " + type;
       }
-    });
 
-    // Build mailto link with prefilled content
-    function updateMailto() {
-      const topic = $("#topic").value || "General";
-      const mood = $("#mood").value || "Neutral";
-      const message = ($("#message").value || "").trim();
-      const email = ($("#email").value || "").trim();
+      function getAIAdvice(topic, mood) {
+        const responses = AI_RESPONSES[topic] || AI_RESPONSES["Other"];
+        const base = responses[Math.floor(Math.random() * responses.length)];
+        const tip = MOOD_TIPS[mood] || "";
+        let advice = base;
+        if (tip) advice += "\n\n" + tip;
+        advice += "\n\nEmotions are signals, not verdicts.";
+        return advice;
+      }
 
-      const subject = encodeURIComponent(`[${CONFIG.BRAND_NAME}] Human Advice Request — ${topic}`);
-      const body = encodeURIComponent(
+      function updateMailto(topic, mood, message, email) {
+        const subject = encodeURIComponent(`[${CONFIG.BRAND_NAME}] Human Advice Request — ${topic}`);
+        const body = encodeURIComponent(
 `Topic: ${topic}
 Mood: ${mood}
-Reply to (email): ${email || "I prefer reply to this sender address."}
+Reply to (email): ${email || "Reply to this sender"}
 
 Message:
 ${message}
 
-(If applicable) Payment reference:
-- Stripe/PayPal transaction ID or email used for payment.
+Payment: I have paid €10 via PayPal (transaction ID: ...)
 
-I prefer to stay anonymous.`.trim());
-
-      const href = `mailto:${encodeURIComponent(CONFIG.OWNER_EMAIL)}?subject=${subject}&body=${body}`;
-      mailtoBtn.href = href;
-    }
-
-    // Update mailto whenever inputs change
-    ["topic","mood","message","email"].forEach(id => {
-      document.getElementById(id).addEventListener("input", updateMailto);
-      document.getElementById(id).addEventListener("change", updateMailto);
-    });
-
-    function status(msg, type) {
-      if (!msg) { statusEl.style.display = "none"; statusEl.className = "status"; statusEl.textContent = ""; return; }
-      statusEl.style.display = "block";
-      statusEl.className = "status " + (type || "");
-      statusEl.textContent = msg;
-    }
-
-    function randomAI() {
-      const base = AI_SNIPPETS[Math.floor(Math.random() * AI_SNIPPETS.length)];
-      return base;
-    }
-
-    // Handle form submit
-    $("#adviceForm").addEventListener("submit", (e) => {
-      e.preventDefault();
-      const topic = $("#topic").value;
-      const message = ($("#message").value || "").trim();
-      const mode = $("#mode").value;
-
-      // Basic validation
-      if (!topic) { status("Please choose a topic.", "err"); return; }
-      if (!message || message.length < 10) { status("Please describe your situation in a few lines.", "err"); return; }
-      if (!mode) { status("Please choose how you want to receive advice.", "err"); return; }
-
-      if (mode === "ai") {
-        const advice = randomAI();
-        aiText.textContent = advice;
-        aiResult.style.display = "block";
-        status("Here is your AI reflection. If you’d like a deeper human reply, switch to Human mode.", "ok");
-        window.scrollTo({ top: aiResult.offsetTop - 20, behavior: "smooth" });
-      } else {
-        // Human mode
-        updateMailto();
-        status("Complete payment first, then click 'Open Email to Send' and we’ll reply within 24h.", "ok");
-        mailtoBlock.style.display = "block";
-        window.scrollTo({ top: mailtoBlock.offsetTop - 20, behavior: "smooth" });
+I prefer to stay anonymous.`);
+        mailtoBtn.href = `mailto:${CONFIG.OWNER_EMAIL}?subject=${subject}&body=${body}`;
       }
-    });
 
-    // Initialize mailto link
-    updateMailto();
+      document.getElementById("adviceForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const topic = document.getElementById("topic").value;
+        const message = document.getElementById("message").value.trim();
+        const mood = document.getElementById("mood").value;
+        const mode = document.getElementById("mode").value;
+        const email = document.getElementById("email").value.trim();
+        status("", "");
+
+        if (!topic || !message || !mode) {
+          status("Please fill everything marked required.", "warn");
+          return;
+        }
+
+        if (mode === "ai") {
+          // Free AI advice
+          aiText.textContent = getAIAdvice(topic, mood);
+          aiResult.style.display = "block";
+          paymentOptions.style.display = "none";
+          mailtoBlock.style.display = "none";
+          status("Here is a reflection to help you think through this. For deeper support you can also request a human reply.", "ok");
+        } else if (mode === "human10") {
+          // Human advice flow: payment + email
+          aiResult.style.display = "none";
+
+          // Prepare PayPal link + email
+          payPayPal.href = CONFIG.PAYPAL_URL_10;
+          updateMailto(topic, mood, message, email);
+
+          paymentOptions.style.display = "block";
+          mailtoBlock.style.display = "block";
+
+          // Open PayPal in a new tab automatically
+          window.open(CONFIG.PAYPAL_URL_10, "_blank");
+
+          status("Step 1: A PayPal page has opened in a new tab to pay €10. Step 2: After payment, click 'Open Email to Send' to send me your request.", "ok");
+        }
+      });
+    });
   </script>
 </body>
 </html>
