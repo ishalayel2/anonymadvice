@@ -3,7 +3,91 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>AnonymAdvice — Honest advice, privately</title>
+
+  <!-- Primary SEO -->
+  <title>AnonymAdvice — Anonymous advice & honest support (AI + optional human reply)</title>
+  <meta name="description" content="Get anonymous advice online. Share your story privately and receive calm AI reflection instantly. Optional €10 human email reply. No account, no judgment." />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <link rel="canonical" href="https://anonymadvice.com/" />
+
+  <!-- Social sharing (Open Graph / Twitter) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://anonymadvice.com/" />
+  <meta property="og:title" content="AnonymAdvice — Honest advice, privately" />
+  <meta property="og:description" content="Anonymous advice online: instant AI reflection + optional €10 human email reply. No account needed." />
+  <!-- If you add an image later, put it here: https://anonymadvice.com/og.png -->
+  <!-- <meta property="og:image" content="https://anonymadvice.com/og.png" /> -->
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AnonymAdvice — Honest advice, privately" />
+  <meta name="twitter:description" content="Anonymous advice online: instant AI reflection + optional €10 human email reply. No account needed." />
+  <!-- <meta name="twitter:image" content="https://anonymadvice.com/og.png" /> -->
+
+  <!-- Optional: favicon (add these files later if you want) -->
+  <!-- <link rel="icon" href="/favicon.ico" /> -->
+
+  <!-- Structured data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "AnonymAdvice",
+        "url": "https://anonymadvice.com/",
+        "email": "contact@anonymadvice.com"
+      },
+      {
+        "@type": "WebSite",
+        "name": "AnonymAdvice",
+        "url": "https://anonymadvice.com/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://anonymadvice.com/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is this anonymous advice really private?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. You can receive AI reflection without creating an account. If you request a human email reply, you provide an email so we can respond. Avoid sharing identifying details if you want to stay anonymous."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the free anonymous AI advice work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You choose a topic, write your situation, and get an instant reflective response on the page. It is not medical, legal, or emergency care."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the €10 human advice option?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "After payment via PayPal, you can send your message by email. A human replies with a structured, thoughtful response within 24–72 hours (excluding weekends/holidays)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use this for medical or emergency situations?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. This service is for reflective support only. If you are in immediate danger or crisis, contact local emergency or professional services."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <style>
     :root {
       --bg-main: #0f172a;
@@ -21,9 +105,7 @@
       --warn: #fb923c;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -43,7 +125,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 24px;
+      margin-bottom: 18px;
       gap: 12px;
     }
 
@@ -67,22 +149,9 @@
       box-shadow: 0 0 18px rgba(250, 204, 21, 0.45);
     }
 
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
-    .brand-title {
-      font-weight: 700;
-      letter-spacing: 0.03em;
-      font-size: 18px;
-    }
-
-    .brand-sub {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
+    .brand-text { display: flex; flex-direction: column; gap: 2px; }
+    .brand-title { font-weight: 700; letter-spacing: 0.03em; font-size: 18px; }
+    .brand-sub { font-size: 12px; color: var(--text-muted); }
 
     .header-badge {
       padding: 6px 10px;
@@ -105,6 +174,23 @@
       box-shadow: 0 0 10px rgba(16, 185, 129, 0.8);
     }
 
+    nav.topnav {
+      display: flex;
+      gap: 10px;
+      margin: 6px 0 18px;
+      flex-wrap: wrap;
+    }
+    nav.topnav a {
+      font-size: 12px;
+      color: #fef3c7;
+      text-decoration: none;
+      border: 1px solid rgba(250, 204, 21, 0.35);
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.6);
+    }
+    nav.topnav a:hover { background: rgba(31, 41, 55, 0.9); }
+
     .hero {
       margin-bottom: 26px;
       display: grid;
@@ -119,14 +205,12 @@
       color: #fefce8;
     }
 
-    .hero-highlight {
-      color: var(--accent);
-    }
+    .hero-highlight { color: var(--accent); }
 
     .hero-sub {
       font-size: 14px;
       color: var(--text-muted);
-      max-width: 480px;
+      max-width: 520px;
       margin-bottom: 14px;
     }
 
@@ -191,10 +275,7 @@
       color: #9ca3af;
     }
 
-    .hero-side-highlight {
-      font-size: 11px;
-      color: #fef3c7;
-    }
+    .hero-side-highlight { font-size: 11px; color: #fef3c7; }
 
     .hero-side-rows {
       display: grid;
@@ -213,21 +294,9 @@
       gap: 1px;
     }
 
-    .metric-label {
-      font-size: 10px;
-      color: var(--text-muted);
-    }
-
-    .metric-value {
-      font-size: 13px;
-      color: #e5e7eb;
-      font-weight: 600;
-    }
-
-    .metric-sub {
-      font-size: 11px;
-      color: #6b7280;
-    }
+    .metric-label { font-size: 10px; color: var(--text-muted); }
+    .metric-value { font-size: 13px; color: #e5e7eb; font-weight: 600; }
+    .metric-sub { font-size: 11px; color: #6b7280; }
 
     .layout-main {
       display: grid;
@@ -245,9 +314,7 @@
       border: 1px solid var(--border-subtle);
     }
 
-    .card-header {
-      margin-bottom: 8px;
-    }
+    .card-header { margin-bottom: 8px; }
 
     .card-title {
       font-size: 16px;
@@ -255,6 +322,7 @@
       display: flex;
       align-items: center;
       gap: 8px;
+      flex-wrap: wrap;
     }
 
     .card-title span.label-free {
@@ -275,26 +343,12 @@
       border: 1px solid rgba(250, 204, 21, 0.8);
     }
 
-    .card-subtitle {
-      font-size: 12px;
-      color: var(--text-muted);
-      margin-top: 2px;
-    }
+    .card-subtitle { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
 
-    label {
-      display: block;
-      margin-top: 10px;
-      font-size: 13px;
-    }
+    label { display: block; margin-top: 10px; font-size: 13px; }
+    label span.req { color: #f97316; margin-left: 3px; }
 
-    label span.req {
-      color: #f97316;
-      margin-left: 3px;
-    }
-
-    select,
-    textarea,
-    input[type="email"] {
+    select, textarea, input[type="email"] {
       width: 100%;
       padding: 9px 10px;
       margin-top: 5px;
@@ -307,24 +361,15 @@
       transition: border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
     }
 
-    select:focus,
-    textarea:focus,
-    input[type="email"]:focus {
+    select:focus, textarea:focus, input[type="email"]:focus {
       border-color: var(--accent);
       box-shadow: 0 0 0 1px rgba(250, 204, 21, 0.35);
       background: #020617;
     }
 
-    textarea {
-      resize: vertical;
-      min-height: 100px;
-    }
+    textarea { resize: vertical; min-height: 100px; }
 
-    .hint {
-      font-size: 11px;
-      color: var(--text-muted);
-      margin-top: 3px;
-    }
+    .hint { font-size: 11px; color: var(--text-muted); margin-top: 3px; }
 
     .inline-fields {
       display: grid;
@@ -332,11 +377,7 @@
       gap: 10px;
     }
 
-    .mode-note {
-      font-size: 11px;
-      color: var(--text-muted);
-      margin-top: 4px;
-    }
+    .mode-note { font-size: 11px; color: var(--text-muted); margin-top: 4px; }
 
     .btn-primary {
       margin-top: 15px;
@@ -366,9 +407,7 @@
       box-shadow: 0 10px 24px rgba(250, 204, 21, 0.45);
     }
 
-    .btn-icon {
-      font-size: 16px;
-    }
+    .btn-icon { font-size: 16px; }
 
     .status {
       margin-top: 12px;
@@ -380,24 +419,11 @@
       border: 1.2px solid #1f2937;
     }
 
-    .status.ok {
-      border-color: var(--success);
-      color: #bbf7d0;
-    }
+    .status.ok { border-color: var(--success); color: #bbf7d0; }
+    .status.err { border-color: var(--danger); color: #fecaca; }
+    .status.warn { border-color: var(--warn); color: #fed7aa; }
 
-    .status.err {
-      border-color: var(--danger);
-      color: #fecaca;
-    }
-
-    .status.warn {
-      border-color: var(--warn);
-      color: #fed7aa;
-    }
-
-    .chat-card {
-      margin-top: 4px;
-    }
+    .chat-card { margin-top: 4px; }
 
     .chat-header {
       font-size: 12px;
@@ -416,18 +442,9 @@
       overflow-y: auto;
     }
 
-    .chat-row {
-      display: flex;
-      margin-bottom: 8px;
-    }
-
-    .chat-row.user {
-      justify-content: flex-end;
-    }
-
-    .chat-row.ai {
-      justify-content: flex-start;
-    }
+    .chat-row { display: flex; margin-bottom: 8px; }
+    .chat-row.user { justify-content: flex-end; }
+    .chat-row.ai { justify-content: flex-start; }
 
     .chat-bubble {
       max-width: 90%;
@@ -459,18 +476,12 @@
       display: flex;
       justify-content: space-between;
       padding: 0 2px;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
-    .typing {
-      font-size: 11px;
-      color: #9ca3af;
-      margin-top: 5px;
-      display: none;
-    }
-
-    .typing span {
-      opacity: 0.4;
-    }
+    .typing { font-size: 11px; color: #9ca3af; margin-top: 5px; display: none; }
+    .typing span { opacity: 0.4; }
 
     .premium-card {
       background: radial-gradient(circle at top left, #1f2937, #020617);
@@ -482,50 +493,15 @@
       margin-top: 4px;
     }
 
-    .premium-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 6px;
-    }
+    .premium-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; gap: 10px; }
+    .premium-title { font-size: 13px; font-weight: 600; color: #fef3c7; }
+    .premium-price { font-size: 13px; font-weight: 700; color: #facc15; }
 
-    .premium-title {
-      font-size: 13px;
-      font-weight: 600;
-      color: #fef3c7;
-    }
+    .premium-sub { font-size: 11px; color: #e5e7eb; margin-bottom: 6px; }
 
-    .premium-price {
-      font-size: 13px;
-      font-weight: 700;
-      color: #facc15;
-    }
-
-    .premium-sub {
-      font-size: 11px;
-      color: #e5e7eb;
-      margin-bottom: 6px;
-    }
-
-    .premium-bullets {
-      list-style: none;
-      padding-left: 0;
-      margin: 0;
-    }
-
-    .premium-bullets li {
-      display: flex;
-      align-items: flex-start;
-      gap: 6px;
-      margin-bottom: 4px;
-      color: #e5e7eb;
-    }
-
-    .premium-bullets span.bullet-dot {
-      font-size: 11px;
-      margin-top: 1px;
-      color: #facc15;
-    }
+    .premium-bullets { list-style: none; padding-left: 0; margin: 0; }
+    .premium-bullets li { display: flex; align-items: flex-start; gap: 6px; margin-bottom: 4px; color: #e5e7eb; }
+    .premium-bullets span.bullet-dot { font-size: 11px; margin-top: 1px; color: #facc15; }
 
     .premium-steps {
       margin-top: 8px;
@@ -535,16 +511,9 @@
       color: #e5e7eb;
     }
 
-    .premium-steps strong {
-      color: #facc15;
-    }
+    .premium-steps strong { color: #facc15; }
 
-    .cta-row {
-      margin-top: 6px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
+    .cta-row { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 8px; }
 
     a.button-link {
       display: inline-flex;
@@ -569,21 +538,10 @@
       transform: translateY(-0.4px);
     }
 
-    a.button-link.secondary {
-      border-color: #4b5563;
-      color: #e5e7eb;
-    }
+    a.button-link.secondary { border-color: #4b5563; color: #e5e7eb; }
 
-    .side-card-title {
-      font-size: 13px;
-      font-weight: 500;
-      margin-bottom: 3px;
-    }
-
-    .side-card-body {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
+    .side-card-title { font-size: 13px; font-weight: 500; margin-bottom: 3px; }
+    .side-card-body { font-size: 12px; color: var(--text-muted); }
 
     .side-list {
       list-style: none;
@@ -593,17 +551,8 @@
       color: #d1d5db;
     }
 
-    .side-list li {
-      margin-bottom: 3px;
-      display: flex;
-      gap: 6px;
-    }
-
-    .side-list .tick {
-      color: #22c55e;
-      font-size: 11px;
-      margin-top: 1px;
-    }
+    .side-list li { margin-bottom: 3px; display: flex; gap: 6px; }
+    .side-list .tick { color: #22c55e; font-size: 11px; margin-top: 1px; }
 
     .footer {
       margin-top: 26px;
@@ -613,54 +562,46 @@
       padding-top: 13px;
     }
 
-    .footer p {
-      margin: 4px 0;
-    }
+    .footer p { margin: 4px 0; }
+    .footer a { color: #eab308; text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
 
-    .footer a {
-      color: #eab308;
-      text-decoration: none;
-    }
+    .footer-contact { margin-top: 8px; padding-top: 7px; border-top: 1px dashed #1f2937; }
 
-    .footer a:hover {
-      text-decoration: underline;
+    .faq h2 {
+      margin: 0 0 10px;
+      font-size: 16px;
+      color: #fefce8;
     }
-
-    .footer-contact {
-      margin-top: 8px;
-      padding-top: 7px;
-      border-top: 1px dashed #1f2937;
+    details {
+      border: 1px solid #1f2937;
+      border-radius: 14px;
+      padding: 10px 12px;
+      background: rgba(2, 6, 23, 0.7);
+      margin-bottom: 10px;
     }
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: #fde68a;
+      outline: none;
+    }
+    details p { margin: 8px 0 0; color: #d1d5db; font-size: 12px; line-height: 1.45; }
 
     @media (max-width: 800px) {
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .layout-main {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .header-badge {
-        display: none;
-      }
+      .hero { grid-template-columns: minmax(0, 1fr); }
+      .layout-main { grid-template-columns: minmax(0, 1fr); }
+      .header-badge { display: none; }
     }
 
     @media (max-width: 520px) {
-      .page {
-        padding-inline: 12px;
-      }
-
-      .inline-fields {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .hero-side-rows {
-        grid-template-columns: 1fr;
-      }
+      .page { padding-inline: 12px; }
+      .inline-fields { grid-template-columns: minmax(0, 1fr); }
+      .hero-side-rows { grid-template-columns: 1fr; }
     }
   </style>
 </head>
+
 <body>
   <div class="page">
     <header>
@@ -673,33 +614,41 @@
       </div>
       <div class="header-badge">
         <span class="dot"></span>
-        <span>Private support • No account needed</span>
+        <span>Anonymous advice • No account needed</span>
       </div>
     </header>
 
-    <section class="hero">
+    <nav class="topnav" aria-label="Site navigation">
+      <a href="#get-advice">Get advice</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#faq">FAQ</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="hero" id="how-it-works">
       <div class="hero-main">
         <h1>
-          Tell your story in private.<br />
-          <span class="hero-highlight">Get calm, honest advice.</span>
+          Anonymous advice online — privately.<br />
+          <span class="hero-highlight">Get calm, honest reflection.</span>
         </h1>
         <p class="hero-sub">
-          Share what’s on your mind anonymously. Get instant AI reflection, and if you want
-          deeper support, a thoughtful human reply by email for €10.
+          Share what’s on your mind anonymously. Get instant AI reflection, and if you want deeper support,
+          request a thoughtful human reply by email for €10.
         </p>
         <div class="hero-pills">
-          <span class="pill pill-accent">Anonymous — no account, no login</span>
+          <span class="pill pill-accent">Anonymous — no login, no account</span>
           <span class="pill">Life, work, relationships, PhD stress & more</span>
           <span class="pill">Built for people who overthink in silence</span>
         </div>
         <div class="hero-note">
           <span class="icon">!</span>
-          <span>Not emergency or medical care. For crises, please contact local professional services.</span>
+          <span>Not emergency, medical, or legal care. For crises, contact local professional services.</span>
         </div>
       </div>
 
       <aside class="hero-side">
-        <div class="hero-side-title">Why anonymous advice works</div>
+        <div class="hero-side-title">Why anonymous advice helps</div>
         <div class="hero-side-highlight">
           People think more clearly when they don’t fear judgment.
         </div>
@@ -712,13 +661,13 @@
           <div class="metric">
             <div class="metric-label">You receive</div>
             <div class="metric-value">Calm reflection</div>
-            <div class="metric-sub">First with AI, then human if you wish.</div>
+            <div class="metric-sub">AI now, optional human later.</div>
           </div>
         </div>
       </aside>
     </section>
 
-    <section class="layout-main">
+    <section class="layout-main" id="get-advice">
       <!-- LEFT: MAIN FORM + AI CHAT + PREMIUM FLOW -->
       <div>
         <div class="card">
@@ -729,14 +678,12 @@
               <span class="label-premium">Optional €10 human reply</span>
             </div>
             <div class="card-subtitle">
-              Fill this once — you can choose free AI advice or a longer human answer afterward.
+              Fill this once — choose free AI reflection or a longer human answer afterward.
             </div>
           </div>
 
           <form id="adviceForm">
-            <label for="topic">
-              Topic <span class="req">*</span>
-            </label>
+            <label for="topic">Topic <span class="req">*</span></label>
             <select id="topic" required>
               <option value="" disabled selected>Select a topic</option>
               <option>Life & direction</option>
@@ -753,9 +700,7 @@
               <option>Other</option>
             </select>
 
-            <label for="message">
-              Your situation (write as you feel) <span class="req">*</span>
-            </label>
+            <label for="message">Your situation (write as you feel) <span class="req">*</span></label>
             <textarea
               id="message"
               required
@@ -763,14 +708,12 @@
               rows="4"
             ></textarea>
             <div class="hint">
-              You can be as detailed or as brief as you like. No names needed.
+              Tip: avoid names and identifying details if you want to stay anonymous.
             </div>
 
             <div class="inline-fields">
               <div>
-                <label for="mood">
-                  Mood right now
-                </label>
+                <label for="mood">Mood right now</label>
                 <select id="mood">
                   <option>Neutral</option>
                   <option>Confused</option>
@@ -783,23 +726,13 @@
                 </select>
               </div>
               <div>
-                <label for="email">
-                  Email (only if you want a human reply)
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  placeholder="your@email.com"
-                />
-                <div class="hint">
-                  Not required for AI advice. Used only to reply to you.
-                </div>
+                <label for="email">Email (only if you want a human reply)</label>
+                <input type="email" id="email" placeholder="your@email.com" />
+                <div class="hint">Not required for AI advice. Used only to reply to you.</div>
               </div>
             </div>
 
-            <label for="mode">
-              Choose advice type <span class="req">*</span>
-            </label>
+            <label for="mode">Choose advice type <span class="req">*</span></label>
             <select id="mode" required>
               <option value="" disabled selected>Select</option>
               <option value="ai">Free — AI advice (instant, on this page)</option>
@@ -821,11 +754,9 @@
           <div id="aiChatCard" class="card chat-card" style="display:none;">
             <div class="chat-header">AI reflection (instant & private)</div>
             <div id="chatBody" class="chat-body"></div>
-            <div id="typing" class="typing">
-              <span>AI is reflecting with you…</span>
-            </div>
+            <div id="typing" class="typing"><span>AI is reflecting with you…</span></div>
             <div class="chat-meta">
-              <span>For deeper, personalized human perspective, you can choose the €10 email reply.</span>
+              <span>For deeper, personalized human perspective, choose the €10 email reply.</span>
             </div>
           </div>
 
@@ -839,18 +770,9 @@
               A real human reads your message with care and sends back a thoughtful, structured response by email.
             </div>
             <ul class="premium-bullets">
-              <li>
-                <span class="bullet-dot">•</span>
-                <span>Designed for complex situations or when you feel stuck in loops.</span>
-              </li>
-              <li>
-                <span class="bullet-dot">•</span>
-                <span>Includes validation, perspective, and practical next steps.</span>
-              </li>
-              <li>
-                <span class="bullet-dot">•</span>
-                <span>We aim to reply within 24–72 hours (excluding weekends/holidays).</span>
-              </li>
+              <li><span class="bullet-dot">•</span><span>Designed for complex situations or when you feel stuck in loops.</span></li>
+              <li><span class="bullet-dot">•</span><span>Includes perspective + practical next steps.</span></li>
+              <li><span class="bullet-dot">•</span><span>Reply within 24–72 hours (excluding weekends/holidays).</span></li>
             </ul>
 
             <div class="premium-steps">
@@ -861,23 +783,63 @@
             </div>
 
             <div class="cta-row">
-              <a
-                id="payPayPal"
-                class="button-link"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a id="payPayPal" class="button-link" href="#" target="_blank" rel="noopener noreferrer">
                 Pay €10 with PayPal
               </a>
-              <a
-                id="mailtoBtn"
-                class="button-link secondary"
-                href="#"
-              >
+              <a id="mailtoBtn" class="button-link secondary" href="#">
                 Open email to send request
               </a>
             </div>
+          </div>
+        </div>
+
+        <!-- FAQ (helps SEO because it adds real query-matching text) -->
+        <div class="card faq" id="faq">
+          <h2>FAQ: Anonymous advice</h2>
+
+          <details>
+            <summary>Is AnonymAdvice really anonymous?</summary>
+            <p>
+              You can get free AI reflection without an account. If you request a human reply, you give an email so we can respond.
+              If you want to stay anonymous, avoid names, workplaces, addresses, and other identifying details.
+            </p>
+          </details>
+
+          <details>
+            <summary>What kind of anonymous advice can I ask for?</summary>
+            <p>
+              Common topics include relationships, work stress, academic/PhD pressure, loneliness, grief, motivation,
+              decision-making, and self-esteem. This is reflective support — not professional medical, legal, or emergency help.
+            </p>
+          </details>
+
+          <details>
+            <summary>How does the €10 human advice work?</summary>
+            <p>
+              After paying via PayPal, you send your request by email (pre-filled). A human replies with a structured response
+              within 24–72 hours (excluding weekends/holidays).
+            </p>
+          </details>
+
+          <details>
+            <summary>Can this replace therapy or crisis services?</summary>
+            <p>
+              No. If you’re in immediate danger or crisis, contact local emergency services or professional support in your area.
+            </p>
+          </details>
+        </div>
+
+        <div class="card" id="privacy">
+          <div class="side-card-title">Privacy & safety</div>
+          <div class="side-card-body">
+            <ul class="side-list">
+              <li><span class="tick">✔</span><span>No account, no public profile, no feed.</span></li>
+              <li><span class="tick">✔</span><span>We never sell your email or story.</span></li>
+              <li><span class="tick">✔</span><span>Payments handled via PayPal.</span></li>
+            </ul>
+            <p style="margin-top:7px;font-size:11px;color:#9ca3af;">
+              This is reflective support — not medical, legal, or emergency care. If you are in crisis, contact local services immediately.
+            </p>
           </div>
         </div>
       </div>
@@ -899,26 +861,21 @@
         </div>
 
         <div class="card">
-          <div class="side-card-title">Your privacy</div>
+          <div class="side-card-title">Quick start</div>
           <div class="side-card-body">
             <ul class="side-list">
-              <li><span class="tick">✔</span><span>No account, no public profile, no feed.</span></li>
-              <li><span class="tick">✔</span><span>We never sell your email or story.</span></li>
-              <li><span class="tick">✔</span><span>Payments are handled via PayPal.</span></li>
+              <li><span class="tick">✔</span><span>Pick a topic and write your situation</span></li>
+              <li><span class="tick">✔</span><span>Get anonymous AI reflection instantly</span></li>
+              <li><span class="tick">✔</span><span>Optional: request a human email reply (€10)</span></li>
             </ul>
-            <p style="margin-top:7px;font-size:11px;color:#9ca3af;">
-              This is a reflective support tool — not medical, legal, or emergency care.
-              If you are in immediate danger or crisis, please contact local emergency or professional services.
-            </p>
           </div>
         </div>
       </aside>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="contact">
       <p>
-        We never store your card details; payments are processed via PayPal. This service does not replace therapy,
-        medical care, or emergency hotlines.
+        Payments are processed via PayPal. This service does not replace therapy, medical care, legal counsel, or emergency hotlines.
       </p>
       <p class="footer-contact">
         <strong>Contact & Support</strong><br />
@@ -1018,10 +975,7 @@
       const payPayPal = document.getElementById("payPayPal");
 
       function status(msg, type) {
-        if (!msg) {
-          statusEl.style.display = "none";
-          return;
-        }
+        if (!msg) { statusEl.style.display = "none"; return; }
         statusEl.style.display = "block";
         statusEl.textContent = msg;
         statusEl.className = "status " + type;
@@ -1040,7 +994,6 @@
       function renderChat(userMessage, aiMessage, mood) {
         chatBody.innerHTML = "";
 
-        // User bubble
         const userRow = document.createElement("div");
         userRow.className = "chat-row user";
         const userBubble = document.createElement("div");
@@ -1049,7 +1002,6 @@
         userRow.appendChild(userBubble);
         chatBody.appendChild(userRow);
 
-        // AI bubble placeholder
         const aiRow = document.createElement("div");
         aiRow.className = "chat-row ai";
         const aiBubble = document.createElement("div");
@@ -1101,31 +1053,23 @@ I prefer to stay anonymous.`
         }
 
         if (mode === "ai") {
-          // Free AI advice, chat-style
           premiumFlow.style.display = "none";
           chatCard.style.display = "block";
           typingEl.style.display = "block";
 
           const aiAdvice = getAIAdvice(topic, mood);
 
-          // Small delay to make it feel more human
           setTimeout(() => {
             typingEl.style.display = "none";
             renderChat(message, aiAdvice, mood);
             status("Here is a reflection to help you think through this. You can always come back and write more.", "ok");
           }, 400);
         } else if (mode === "human10") {
-          // Human advice flow
           chatCard.style.display = "none";
-
           payPayPal.href = CONFIG.PAYPAL_URL_10;
           updateMailto(topic, mood, message, email);
-
           premiumFlow.style.display = "block";
-
-          // Open PayPal payment in a new tab
           window.open(CONFIG.PAYPAL_URL_10, "_blank", "noopener");
-
           status(
             "Step 1: A PayPal page has opened in a new tab to pay €10. Step 2: Then click “Open email to send request” so we can receive your message and reply by email.",
             "ok"
