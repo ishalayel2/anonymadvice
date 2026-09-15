@@ -1,46 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHG16C7HC1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-SHG16C7HC1');
-</script>
+  <!-- Google Analytics: keep this at the top -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHG16C7HC1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SHG16C7HC1');
+  </script>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Core SEO -->
-  <title>Anonymous Advice Online | Honest, Private Advice — AnonymAdvice</title>
-  <meta name="description" content="Looking for honest advice without judgment? Share your situation anonymously and get a free instant reflection, with an optional €10 human email reply. No account required." />
+  <title>Anonymous Advice Online | Honest Private Advice — AnonymAdvice</title>
+  <meta name="description" content="Get honest anonymous advice about work, life, decisions, PhD stress, loneliness, grief and motivation. Your first short personal reply is free. No account or public post." />
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
-  <meta name="googlebot" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
   <link rel="canonical" href="https://anonymadvice.com/" />
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://anonymadvice.com/sitemap.xml" />
-  <meta name="theme-color" content="#0f172a" />
-  <meta name="color-scheme" content="dark" />
+  <link rel="sitemap" type="application/xml" href="https://anonymadvice.com/sitemap.xml" />
+  <meta name="theme-color" content="#fffaf0" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="AnonymAdvice" />
-  <meta property="og:locale" content="en_US" />
   <meta property="og:url" content="https://anonymadvice.com/" />
   <meta property="og:title" content="Anonymous Advice Online | AnonymAdvice" />
-  <meta property="og:description" content="Get honest, judgment-free advice anonymously. Free instant reflection with an optional human reply by email." />
-
-  <!-- X / Twitter cards -->
+  <meta property="og:description" content="Tell us what is going on. Your first short personal reply is free. No account, no public post." />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Anonymous Advice Online | AnonymAdvice" />
-  <meta name="twitter:description" content="Get honest, judgment-free advice anonymously. Free instant reflection with an optional human reply by email." />
+  <meta name="twitter:description" content="Honest, private advice without a public post. First short personal reply free." />
 
-  <!-- Lightweight inline favicon -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23fbbf24'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-size='36' font-family='Arial' font-weight='700' fill='%23111827'%3EA%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23f4b942'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-size='36' font-family='Arial' font-weight='700' fill='%232d2418'%3EA%3C/text%3E%3C/svg%3E" />
 
-  <!-- Structured data: describe the site and service accurately. -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -51,56 +41,29 @@
         "url": "https://anonymadvice.com/",
         "name": "AnonymAdvice",
         "alternateName": "Anonymous Advice",
-        "description": "Anonymous online advice and judgment-free reflection for life, relationships, work, stress, decisions and other personal situations.",
+        "description": "Anonymous online advice for work, life direction, decisions, academic stress, loneliness, grief and motivation.",
         "inLanguage": "en"
       },
       {
         "@type": "WebPage",
         "@id": "https://anonymadvice.com/#webpage",
         "url": "https://anonymadvice.com/",
-        "name": "Anonymous Advice Online | Honest, Private Advice — AnonymAdvice",
-        "description": "Share your situation anonymously and get a free instant reflection, with an optional human email reply.",
-        "isPartOf": { "@id": "https://anonymadvice.com/#website" },
-        "about": [
-          { "@type": "Thing", "name": "Anonymous advice" },
-          { "@type": "Thing", "name": "Honest advice" },
-          { "@type": "Thing", "name": "Relationship advice" },
-          { "@type": "Thing", "name": "Career advice" },
-          { "@type": "Thing", "name": "Decision making" }
-        ],
+        "name": "Anonymous Advice Online | Honest Private Advice — AnonymAdvice",
+        "description": "Share your situation privately and receive a short personal reply for free, with an optional deeper paid reply.",
+        "isPartOf": {"@id": "https://anonymadvice.com/#website"},
         "inLanguage": "en"
       },
       {
-        "@type": "WebApplication",
-        "@id": "https://anonymadvice.com/#app",
+        "@type": "Service",
+        "@id": "https://anonymadvice.com/#service",
         "name": "AnonymAdvice",
-        "url": "https://anonymadvice.com/",
-        "applicationCategory": "LifestyleApplication",
-        "operatingSystem": "Any",
-        "browserRequirements": "Requires a modern web browser with JavaScript enabled.",
-        "isAccessibleForFree": true,
-        "description": "A browser-based anonymous advice tool offering an instant automated reflection and an optional human email reply.",
+        "provider": {"@type": "Organization", "name": "AnonymAdvice"},
+        "areaServed": "Worldwide",
+        "description": "Private written perspective on everyday personal situations.",
         "offers": [
-          {
-            "@type": "Offer",
-            "name": "Free instant reflection",
-            "price": "0",
-            "priceCurrency": "EUR"
-          },
-          {
-            "@type": "Offer",
-            "name": "Human advice by email",
-            "price": "10",
-            "priceCurrency": "EUR"
-          }
+          {"@type": "Offer", "name": "First short personal reply", "price": "0", "priceCurrency": "EUR"},
+          {"@type": "Offer", "name": "Detailed personal reply", "price": "10", "priceCurrency": "EUR"}
         ]
-      },
-      {
-        "@type": "Organization",
-        "@id": "https://anonymadvice.com/#organization",
-        "name": "AnonymAdvice",
-        "url": "https://anonymadvice.com/",
-        "email": "contact@anonymadvice.com"
       }
     ]
   }
@@ -108,943 +71,649 @@
 
   <style>
     :root {
-      --bg-main: #0f172a;
-      --bg-card: #111827;
-      --bg-deep: #020617;
-      --accent: #fbbf24;
-      --accent-soft: #ffe070;
-      --accent-strong: #f59e0b;
-      --text-main: #e5e7eb;
-      --text-muted: #9ca3af;
-      --border: #1f2937;
-      --danger: #ef4444;
-      --success: #22c55e;
-      --warn: #fb923c;
+      --bg: #fffaf0;
+      --surface: #ffffff;
+      --surface-soft: #fff7e5;
+      --text: #2d2a26;
+      --muted: #706a63;
+      --line: #eadfcf;
+      --accent: #e6a817;
+      --accent-dark: #b87c00;
+      --green: #3c8a68;
+      --shadow: 0 12px 34px rgba(74, 56, 30, 0.08);
+      --radius: 18px;
     }
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #1f2937 0, #020617 60%);
-      color: var(--text-main);
       margin: 0;
-      min-height: 100vh;
-      line-height: 1.45;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 85% 0%, #fff0be 0, transparent 24rem),
+        linear-gradient(180deg, #fffdf8 0%, var(--bg) 100%);
+      line-height: 1.5;
     }
 
     a { color: inherit; }
-    button, input, select, textarea { font: inherit; }
-
-    .skip-link {
-      position: absolute;
-      left: -9999px;
-      top: 8px;
-      z-index: 999;
-      padding: 8px 12px;
-      border-radius: 8px;
-      background: #fff;
-      color: #111827;
-    }
-    .skip-link:focus { left: 8px; }
 
     .page {
-      width: min(1080px, 100%);
+      width: min(1040px, calc(100% - 32px));
       margin: 0 auto;
-      padding: 20px 16px 36px;
     }
 
     header {
+      min-height: 76px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 14px;
+      gap: 16px;
     }
 
-    .brand { display: flex; align-items: center; gap: 10px; }
-    .brand-mark {
-      width: 34px;
-      height: 34px;
-      border-radius: 10px;
-      display: grid;
-      place-items: center;
-      background: radial-gradient(circle at 30% 20%, #fef9c3, #facc15 35%, #b45309 100%);
-      color: #111827;
-      font-weight: 800;
-      font-size: 18px;
-      box-shadow: 0 0 18px rgba(250, 204, 21, .45);
-    }
-    .brand-text { display: flex; flex-direction: column; gap: 2px; }
-    .brand-title { font-weight: 750; letter-spacing: .02em; font-size: 18px; }
-    .brand-sub { font-size: 12px; color: var(--text-muted); }
-
-    .header-badge {
+    .brand {
       display: flex;
       align-items: center;
-      gap: 7px;
-      padding: 6px 10px;
-      border: 1px solid rgba(248,250,252,.08);
-      border-radius: 999px;
-      background: rgba(15,23,42,.72);
-      color: var(--text-muted);
-      font-size: 11px;
-      white-space: nowrap;
-    }
-    .dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: rgba(52,211,153,.95);
-      box-shadow: 0 0 10px rgba(16,185,129,.8);
-    }
-
-    .topnav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 6px 0 20px;
-    }
-    .topnav a {
-      padding: 6px 10px;
-      border: 1px solid rgba(250,204,21,.36);
-      border-radius: 999px;
-      background: rgba(15,23,42,.6);
-      color: #fef3c7;
+      gap: 10px;
       text-decoration: none;
-      font-size: 12px;
-    }
-    .topnav a:hover, .topnav a:focus-visible { background: rgba(31,41,55,.95); outline: none; }
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(280px, .8fr);
-      gap: 20px;
-      align-items: stretch;
-      margin-bottom: 22px;
     }
 
-    .hero-main h1 {
-      max-width: 720px;
-      margin: 0 0 10px;
-      color: #fefce8;
-      font-size: clamp(30px, 5vw, 44px);
-      line-height: 1.08;
-      letter-spacing: -.025em;
-    }
-    .hero-highlight { color: var(--accent); }
-    .hero-sub {
-      max-width: 690px;
-      margin: 0 0 14px;
-      color: #cbd5e1;
-      font-size: 15px;
-    }
-    .hero-sub strong { color: #fef3c7; }
-
-    .hero-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
-    .pill {
-      padding: 5px 9px;
-      border: 1px solid rgba(148,163,184,.44);
-      border-radius: 999px;
-      background: rgba(15,23,42,.72);
-      color: #e5e7eb;
-      font-size: 11px;
-    }
-    .pill-accent { border-color: rgba(250,191,36,.9); color: #facc15; background: rgba(31,41,55,.9); }
-
-    .hero-note {
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-      color: #eab308;
-      font-size: 12px;
-    }
-    .hero-note .icon {
-      flex: 0 0 auto;
-      width: 17px;
-      height: 17px;
-      border: 1px solid #eab308;
-      border-radius: 50%;
+    .brand-mark {
+      width: 38px;
+      height: 38px;
       display: grid;
       place-items: center;
-      font-size: 11px;
-      margin-top: 1px;
-    }
-
-    .hero-side, .card, .seo-section {
-      background: linear-gradient(145deg, rgba(17,24,39,.98), rgba(2,6,23,.98));
-      border: 1px solid var(--border);
-      box-shadow: 0 16px 40px rgba(0,0,0,.45);
-    }
-    .hero-side {
-      padding: 16px;
-      border-radius: 18px;
-      color: var(--text-muted);
-    }
-    .eyebrow {
-      margin-bottom: 7px;
-      color: #9ca3af;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: .12em;
-    }
-    .hero-side h2 { margin: 0 0 8px; color: #fef3c7; font-size: 17px; }
-    .hero-side p { margin: 0 0 12px; font-size: 12px; }
-    .hero-side-rows { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-    .metric {
-      padding: 9px;
-      border: 1px solid #1f2937;
       border-radius: 12px;
-      background: rgba(15,23,42,.85);
-    }
-    .metric-label { color: var(--text-muted); font-size: 10px; }
-    .metric-value { color: #e5e7eb; font-size: 13px; font-weight: 650; }
-    .metric-sub { color: #6b7280; font-size: 11px; }
-
-    .layout-main {
-      display: grid;
-      grid-template-columns: minmax(0, 1.35fr) minmax(280px, .65fr);
-      gap: 18px;
-      align-items: start;
+      background: linear-gradient(145deg, #ffd875, #e7a816);
+      color: #2d2418;
+      font-weight: 900;
+      box-shadow: 0 7px 18px rgba(230, 168, 23, .24);
     }
 
-    .card {
-      padding: 18px;
-      border-radius: 18px;
-      margin-bottom: 16px;
+    .brand-name {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -.02em;
     }
-    .card-header { margin-bottom: 8px; }
-    .card-title { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; font-size: 17px; font-weight: 680; }
-    .label-free, .label-premium {
-      padding: 2px 7px;
-      border-radius: 999px;
-      font-size: 11px;
-      font-weight: 650;
-    }
-    .label-free { background: rgba(74,222,128,.08); color: #4ade80; border: 1px solid rgba(74,222,128,.7); }
-    .label-premium { background: rgba(250,204,21,.12); color: #facc15; border: 1px solid rgba(250,204,21,.8); }
-    .card-subtitle { margin-top: 3px; color: var(--text-muted); font-size: 12px; }
 
-    label { display: block; margin-top: 10px; font-size: 13px; }
-    .req { color: #f97316; margin-left: 3px; }
-
-    select, textarea, input[type="email"] {
-      width: 100%;
-      margin-top: 5px;
-      padding: 10px 11px;
-      border: 1px solid #293548;
-      border-radius: 10px;
-      background: #020617;
-      color: #e5e7eb;
+    .top-note {
       font-size: 13px;
-      outline: none;
-      transition: border-color .18s ease, box-shadow .18s ease;
+      color: var(--muted);
     }
-    select:focus, textarea:focus, input[type="email"]:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 2px rgba(250,204,21,.18);
-    }
-    textarea { min-height: 118px; resize: vertical; }
-    .hint, .mode-note { margin-top: 4px; color: var(--text-muted); font-size: 11px; }
-    .inline-fields { display: grid; grid-template-columns: 1fr 1.2fr; gap: 10px; }
 
-    .btn-primary {
-      margin-top: 15px;
-      padding: 11px 17px;
-      border: 0;
+    .hero {
+      padding: 66px 0 54px;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      gap: 7px;
+      align-items: center;
+      padding: 7px 11px;
+      border: 1px solid #ead7a6;
       border-radius: 999px;
-      background: linear-gradient(135deg, var(--accent-soft), var(--accent-strong));
-      color: #111827;
+      background: rgba(255,255,255,.74);
+      color: #7c5d18;
+      font-size: 13px;
       font-weight: 700;
-      font-size: 14px;
-      cursor: pointer;
-      box-shadow: 0 12px 30px rgba(250,204,21,.4);
-      transition: transform .1s ease, box-shadow .1s ease, filter .1s ease;
     }
-    .btn-primary:hover { transform: translateY(-1px); filter: brightness(1.02); box-shadow: 0 16px 36px rgba(250,204,21,.48); }
-    .btn-primary:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
 
-    .status {
-      display: none;
-      margin-top: 12px;
-      padding: 10px 11px;
-      border: 1px solid #1f2937;
-      border-radius: 12px;
-      background: #020617;
-      font-size: 12px;
+    h1 {
+      max-width: 820px;
+      margin: 18px auto 14px;
+      font-size: clamp(38px, 7vw, 66px);
+      line-height: 1.02;
+      letter-spacing: -.045em;
     }
-    .status.ok { border-color: var(--success); color: #bbf7d0; }
-    .status.err { border-color: var(--danger); color: #fecaca; }
-    .status.warn { border-color: var(--warn); color: #fed7aa; }
 
-    .chat-card { margin-top: 14px; }
-    .chat-header { margin-bottom: 6px; color: #9ca3af; font-size: 11px; text-transform: uppercase; letter-spacing: .12em; }
-    .chat-body { max-height: 300px; overflow-y: auto; padding: 10px; border: 1px solid #111827; border-radius: 14px; background: #020617; }
-    .chat-row { display: flex; margin-bottom: 8px; }
-    .chat-row.user { justify-content: flex-end; }
-    .chat-row.ai { justify-content: flex-start; }
-    .chat-bubble { max-width: 90%; padding: 9px 10px; border-radius: 11px; font-size: 13px; line-height: 1.4; white-space: pre-wrap; overflow-wrap: anywhere; }
-    .chat-bubble.user { background: linear-gradient(135deg,#22c55e,#16a34a); color: #022c22; border-bottom-right-radius: 4px; }
-    .chat-bubble.ai { background: #020617; border: 1px solid #1f2937; border-bottom-left-radius: 4px; }
-    .chat-meta { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding: 0 2px; margin-top: 3px; color: #6b7280; font-size: 10px; }
-    .typing { display: none; margin-top: 5px; color: #9ca3af; font-size: 11px; }
-
-    .premium-card {
-      display: none;
-      margin-top: 14px;
-      padding: 14px;
-      border: 1px solid rgba(250,204,21,.6);
-      border-radius: 16px;
-      background: radial-gradient(circle at top left,#1f2937,#020617);
-      box-shadow: 0 14px 32px rgba(250,204,21,.18);
-      font-size: 12px;
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: clamp(16px, 2vw, 19px);
     }
-    .premium-header { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 6px; }
-    .premium-title { color: #fef3c7; font-size: 13px; font-weight: 650; }
-    .premium-price { color: #facc15; font-size: 13px; font-weight: 750; }
-    .premium-sub { color: #e5e7eb; font-size: 11px; }
-    .premium-bullets, .side-list { list-style: none; padding-left: 0; }
-    .premium-bullets li, .side-list li { display: flex; gap: 7px; margin-bottom: 5px; }
-    .premium-bullets .bullet-dot { color: #facc15; }
-    .premium-steps { margin-top: 8px; padding-top: 8px; border-top: 1px dashed rgba(148,163,184,.5); color: #e5e7eb; font-size: 11px; }
-    .premium-steps strong { color: #facc15; }
-    .cta-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
-    .button-link {
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
+
+    .button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 6px;
-      padding: 8px 11px;
-      border: 1px solid rgba(250,204,21,.8);
+      min-height: 46px;
+      padding: 0 18px;
+      border: 0;
       border-radius: 999px;
-      background: rgba(15,23,42,.9);
-      color: #fefce8;
       text-decoration: none;
-      font-size: 12px;
-      font-weight: 550;
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
     }
-    .button-link:hover { background: rgba(31,41,55,.95); }
-    .button-link.secondary { border-color: #4b5563; color: #e5e7eb; }
 
-    .side-card-title { margin-bottom: 5px; color: #f3f4f6; font-size: 14px; font-weight: 650; }
-    .side-card-body { color: var(--text-muted); font-size: 12px; }
-    .side-list { margin: 7px 0 0; color: #d1d5db; }
-    .tick { color: #22c55e; font-size: 11px; }
+    .button:hover { transform: translateY(-1px); }
 
-    .content-wrap { margin-top: 12px; }
-    .seo-section {
-      margin-bottom: 16px;
-      padding: 20px;
-      border-radius: 18px;
+    .button-primary {
+      background: linear-gradient(135deg, #ffd05a, #e6a817);
+      color: #2b2110;
+      box-shadow: 0 10px 24px rgba(230, 168, 23, .23);
     }
-    .seo-section h2 { margin: 0 0 8px; color: #fefce8; font-size: 22px; line-height: 1.2; }
-    .seo-section h3 { margin: 0 0 5px; color: #fef3c7; font-size: 15px; }
-    .seo-section p { margin: 7px 0; color: #cbd5e1; font-size: 13px; }
-    .seo-section .intro { max-width: 850px; color: #d1d5db; font-size: 14px; }
 
-    .topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 14px; }
-    .topic-card {
-      padding: 13px;
-      border: 1px solid #1f2937;
+    .button-secondary {
+      background: #fff;
+      border: 1px solid var(--line);
+      color: var(--text);
+    }
+
+    .promise-row {
+      max-width: 700px;
+      margin: 25px auto 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .promise-row span::before {
+      content: "✓";
+      margin-right: 6px;
+      color: var(--green);
+      font-weight: 900;
+    }
+
+    .section { padding: 42px 0; }
+
+    .section-title {
+      margin: 0 0 8px;
+      text-align: center;
+      font-size: clamp(26px, 4vw, 36px);
+      letter-spacing: -.025em;
+    }
+
+    .section-sub {
+      max-width: 650px;
+      margin: 0 auto 24px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    .topics {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+
+    .topic {
+      min-height: 155px;
+      padding: 18px 15px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.78);
+      box-shadow: var(--shadow);
+    }
+
+    .topic-icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 13px;
+      border-radius: 12px;
+      background: var(--surface-soft);
+      font-size: 21px;
+    }
+
+    .topic h3 {
+      margin: 0 0 7px;
+      font-size: 16px;
+      line-height: 1.25;
+    }
+
+    .topic p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .advice-card {
+      max-width: 760px;
+      margin: 12px auto 0;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .offer-strip {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .offer {
+      padding: 14px;
+      border: 1px solid var(--line);
       border-radius: 14px;
-      background: rgba(2,6,23,.65);
+      background: #fffdf8;
     }
-    .topic-card p { margin: 0; color: #9ca3af; font-size: 12px; }
-    .topic-card a { color: #fde68a; text-decoration: none; }
-    .topic-card a:hover { text-decoration: underline; }
 
-    .steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-top: 13px; }
-    .step { padding: 13px; border: 1px solid #1f2937; border-radius: 14px; background: rgba(15,23,42,.62); }
-    .step-num { display: inline-grid; place-items: center; width: 24px; height: 24px; margin-bottom: 7px; border-radius: 50%; background: rgba(250,204,21,.12); color: #facc15; font-size: 11px; font-weight: 750; }
-    .step p { margin: 0; font-size: 12px; color: #aeb8c6; }
-
-    .question-list { margin: 10px 0 0; padding-left: 18px; color: #d1d5db; font-size: 13px; }
-    .question-list li { margin-bottom: 6px; }
-
-    details {
-      margin-bottom: 9px;
-      padding: 11px 12px;
-      border: 1px solid #1f2937;
-      border-radius: 13px;
-      background: rgba(2,6,23,.72);
+    .offer strong {
+      display: block;
+      margin-bottom: 3px;
+      font-size: 15px;
     }
-    summary { cursor: pointer; color: #fde68a; font-weight: 650; font-size: 13px; }
-    details p { margin: 8px 0 0; color: #d1d5db; font-size: 12px; }
 
-    .privacy-note {
-      margin-top: 10px;
-      padding: 11px 12px;
-      border-left: 3px solid #22c55e;
-      border-radius: 10px;
-      background: rgba(34,197,94,.06);
-      color: #d1fae5;
+    .offer span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .offer.free { border-color: #bcdccb; background: #f5fbf7; }
+    .offer.paid { border-color: #ecd38e; background: #fffbef; }
+
+    label {
+      display: block;
+      margin: 13px 0 6px;
+      font-size: 13px;
+      font-weight: 750;
+    }
+
+    select, textarea, input[type="email"] {
+      width: 100%;
+      border: 1px solid #d9d0c4;
+      border-radius: 12px;
+      background: #fff;
+      color: var(--text);
+      padding: 12px 13px;
+      font: inherit;
+      font-size: 14px;
+      outline: none;
+    }
+
+    select:focus, textarea:focus, input[type="email"]:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(230,168,23,.12);
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .hint {
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .choice-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 13px;
+    }
+
+    .choice {
+      position: relative;
+      display: block;
+      margin: 0;
+      cursor: pointer;
+    }
+
+    .choice input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .choice-content {
+      display: block;
+      height: 100%;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fff;
+      transition: border-color .15s ease, box-shadow .15s ease, background .15s ease;
+    }
+
+    .choice input:checked + .choice-content {
+      border-color: var(--accent);
+      background: #fff9e9;
+      box-shadow: 0 0 0 3px rgba(230,168,23,.10);
+    }
+
+    .choice-title {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .choice-desc {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    .submit-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .status {
+      display: none;
+      margin-top: 15px;
+      padding: 12px 13px;
+      border-radius: 12px;
+      background: #f5fbf7;
+      border: 1px solid #bcdccb;
+      color: #285d46;
+      font-size: 13px;
+    }
+
+    .status.warn {
+      background: #fff8e6;
+      border-color: #ead18a;
+      color: #755500;
+    }
+
+    .next-box {
+      display: none;
+      margin-top: 16px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fffdf8;
+    }
+
+    .next-box h3 {
+      margin: 0 0 6px;
+      font-size: 16px;
+    }
+
+    .next-box p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .next-actions {
+      display: flex;
+      gap: 9px;
+      flex-wrap: wrap;
+    }
+
+    .trust {
+      max-width: 760px;
+      margin: 14px auto 0;
+      text-align: center;
+      color: var(--muted);
       font-size: 12px;
     }
 
     footer {
-      margin-top: 24px;
-      padding-top: 14px;
-      border-top: 1px solid #111827;
-      color: var(--text-muted);
-      font-size: 11px;
+      margin-top: 52px;
+      padding: 22px 0 36px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
     }
+
     footer p { margin: 5px 0; }
-    footer a { color: #eab308; text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
-    .footer-links { display: flex; flex-wrap: wrap; gap: 12px; margin: 9px 0; }
+    footer a { color: var(--accent-dark); }
 
     @media (max-width: 900px) {
-      .hero, .layout-main { grid-template-columns: 1fr; }
-      .topic-grid { grid-template-columns: repeat(2, 1fr); }
+      .topics { grid-template-columns: repeat(2, 1fr); }
     }
 
-    @media (max-width: 620px) {
-      .page { padding-inline: 12px; }
-      .header-badge { display: none; }
-      .inline-fields, .hero-side-rows, .steps, .topic-grid { grid-template-columns: 1fr; }
-      .hero-main h1 { font-size: clamp(30px, 10vw, 38px); }
-      .topnav { gap: 6px; }
-      .topnav a { padding: 5px 8px; }
+    @media (max-width: 650px) {
+      .page { width: min(100% - 22px, 1040px); }
+      .top-note { display: none; }
+      .hero { padding: 45px 0 35px; }
+      .topics, .offer-strip, .choice-grid { grid-template-columns: 1fr; }
+      .advice-card { padding: 18px; }
     }
   </style>
 </head>
 
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
-
   <div class="page">
     <header>
-      <div class="brand" aria-label="AnonymAdvice home">
+      <a class="brand" href="/" aria-label="AnonymAdvice home">
         <div class="brand-mark" aria-hidden="true">A</div>
-        <div class="brand-text">
-          <div class="brand-title">AnonymAdvice</div>
-          <div class="brand-sub">Honest advice. Anonymous. Judgment-free.</div>
-        </div>
-      </div>
-      <div class="header-badge">
-        <span class="dot" aria-hidden="true"></span>
-        <span>No account needed for instant reflection</span>
-      </div>
+        <div class="brand-name">AnonymAdvice</div>
+      </a>
+      <div class="top-note">Private perspective. No public post.</div>
     </header>
 
-    <nav class="topnav" aria-label="Primary navigation">
-      <a href="#get-advice">Get advice</a>
-      <a href="#topics">Advice topics</a>
-      <a href="#how-it-works">How it works</a>
-      <a href="#questions">Questions</a>
-      <a href="#faq">FAQ</a>
-      <a href="#privacy">Privacy</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <main>
+      <section class="hero">
+        <div class="hero-badge">Anonymous advice from a real person</div>
+        <h1>Tell someone what is really going on.</h1>
+        <p>
+          Share your situation privately and get an honest outside perspective.
+          Your first short personal reply is free.
+        </p>
 
-    <main id="main">
-      <section class="hero" aria-labelledby="page-title">
-        <div class="hero-main">
-          <h1 id="page-title">
-            Anonymous advice online.<br />
-            <span class="hero-highlight">Honest perspective, without judgment.</span>
-          </h1>
-
-          <p class="hero-sub">
-            Need advice but do not want to ask friends, family or coworkers? Share what is happening <strong>anonymously</strong> and get a free instant reflection. If you want a deeper second opinion, you can also request a thoughtful human reply by email for €10.
-          </p>
-
-          <div class="hero-pills" aria-label="Service highlights">
-            <span class="pill pill-accent">Anonymous — no login or public profile</span>
-            <span class="pill">Relationship, life, work and decision advice</span>
-            <span class="pill">Free instant reflection</span>
-          </div>
-
-          <div class="hero-note">
-            <span class="icon" aria-hidden="true">!</span>
-            <span>This is general reflective support, not emergency, medical, mental-health, financial or legal professional care.</span>
-          </div>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#ask">Ask for advice →</a>
+          <a class="button button-secondary" href="#topics">What can I ask?</a>
         </div>
 
-        <aside class="hero-side" aria-labelledby="why-title">
-          <div class="eyebrow">Private place to think</div>
-          <h2 id="why-title">Why ask for advice anonymously?</h2>
-          <p>
-            Sometimes you want an outside perspective without explaining yourself to someone you know. AnonymAdvice gives you a simple place to write the situation down and consider a calmer next step.
-          </p>
-          <div class="hero-side-rows">
-            <div class="metric">
-              <div class="metric-label">You share</div>
-              <div class="metric-value">Without an account</div>
-              <div class="metric-sub">No username or public post.</div>
-            </div>
-            <div class="metric">
-              <div class="metric-label">You receive</div>
-              <div class="metric-value">A second perspective</div>
-              <div class="metric-sub">Instant first, human if wanted.</div>
-            </div>
-          </div>
-        </aside>
+        <div class="promise-row">
+          <span>No account</span>
+          <span>No public profile</span>
+          <span>First short reply free</span>
+        </div>
       </section>
 
-      <section class="layout-main" id="get-advice" aria-label="Get anonymous advice">
-        <div>
-          <div class="card">
-            <div class="card-header">
-              <div class="card-title">
-                Tell us what is going on
-                <span class="label-free">Free instant reflection</span>
-                <span class="label-premium">Optional €10 human reply</span>
-              </div>
-              <div class="card-subtitle">
-                No name is needed. Describe the situation in your own words and choose how you want to receive a response.
-              </div>
+      <section class="section" id="topics">
+        <h2 class="section-title">What can you ask about?</h2>
+        <p class="section-sub">Choose any everyday situation where you want a neutral outside perspective.</p>
+
+        <div class="topics">
+          <article class="topic">
+            <div class="topic-icon" aria-hidden="true">💼</div>
+            <h3>Work and career</h3>
+            <p>Jobs, workplace problems, career changes and professional choices.</p>
+          </article>
+
+          <article class="topic">
+            <div class="topic-icon" aria-hidden="true">🧭</div>
+            <h3>Life advice and direction</h3>
+            <p>Feeling stuck, changing direction or wondering what to do next.</p>
+          </article>
+
+          <article class="topic">
+            <div class="topic-icon" aria-hidden="true">⚖️</div>
+            <h3>Decision-making</h3>
+            <p>When both choices feel difficult and you need another perspective.</p>
+          </article>
+
+          <article class="topic">
+            <div class="topic-icon" aria-hidden="true">🎓</div>
+            <h3>Academic and PhD stress</h3>
+            <p>Pressure, motivation, supervisors, uncertainty and research life.</p>
+          </article>
+
+          <article class="topic">
+            <div class="topic-icon" aria-hidden="true">🌙</div>
+            <h3>Loneliness, grief and motivation</h3>
+            <p>When you need to put difficult thoughts into words without judgment.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="ask">
+        <h2 class="section-title">Ask anonymously</h2>
+        <p class="section-sub">No name is required. Write naturally and leave out identifying details.</p>
+
+        <div class="advice-card">
+          <div class="offer-strip">
+            <div class="offer free">
+              <strong>First short reply — Free</strong>
+              <span>A brief personal response to your situation.</span>
+            </div>
+            <div class="offer paid">
+              <strong>Detailed reply — €10</strong>
+              <span>A deeper written perspective with practical next steps.</span>
+            </div>
+          </div>
+
+          <form id="adviceForm">
+            <label for="topic">Topic</label>
+            <select id="topic" required>
+              <option value="" disabled selected>Select a topic</option>
+              <option>Work and career</option>
+              <option>Life advice and direction</option>
+              <option>Decision-making</option>
+              <option>Academic and PhD stress</option>
+              <option>Loneliness, grief and motivation</option>
+              <option>Relationships and family</option>
+              <option>Other</option>
+            </select>
+
+            <label for="message">What is going on?</label>
+            <textarea
+              id="message"
+              required
+              maxlength="5000"
+              placeholder="Write what happened, what you are unsure about, and what you would like an outside opinion on..."
+            ></textarea>
+            <div class="hint">Avoid names, addresses, employers or other identifying details if you want to remain anonymous.</div>
+
+            <label for="email">Email for your private reply</label>
+            <input
+              id="email"
+              type="email"
+              autocomplete="email"
+              required
+              placeholder="your@email.com"
+            />
+
+            <div class="choice-grid" aria-label="Choose reply type">
+              <label class="choice">
+                <input type="radio" name="replyType" value="free" checked />
+                <span class="choice-content">
+                  <span class="choice-title">
+                    <span>Short reply</span>
+                    <span>Free</span>
+                  </span>
+                  <span class="choice-desc">A brief first personal perspective by email.</span>
+                </span>
+              </label>
+
+              <label class="choice">
+                <input type="radio" name="replyType" value="paid" />
+                <span class="choice-content">
+                  <span class="choice-title">
+                    <span>Detailed reply</span>
+                    <span>€10</span>
+                  </span>
+                  <span class="choice-desc">A longer response with deeper perspective and next steps.</span>
+                </span>
+              </label>
             </div>
 
-            <form id="adviceForm">
-              <label for="topic">Topic <span class="req">*</span></label>
-              <select id="topic" required>
-                <option value="" disabled selected>Select a topic</option>
-                <option>Life & direction</option>
-                <option>Stress & anxiety</option>
-                <option>Work & career</option>
-                <option>Relationships</option>
-                <option>Health & habits</option>
-                <option>Loss & grief</option>
-                <option>PhD / academic stress</option>
-                <option>Loneliness</option>
-                <option>Motivation</option>
-                <option>Decision-making</option>
-                <option>Self-esteem</option>
-                <option>Other</option>
-              </select>
-
-              <label for="message">Your situation <span class="req">*</span></label>
-              <textarea id="message" required maxlength="5000" rows="5" placeholder="Example: I have been offered a new job, but taking it would mean moving away from my partner. I keep changing my mind and I need an outside perspective..."></textarea>
-              <div class="hint">For more anonymity, leave out names, addresses, employers and other identifying details.</div>
-
-              <div class="inline-fields">
-                <div>
-                  <label for="mood">How do you feel right now?</label>
-                  <select id="mood">
-                    <option>Neutral</option>
-                    <option>Confused</option>
-                    <option>Anxious</option>
-                    <option>Sad</option>
-                    <option>Angry</option>
-                    <option>Hopeful</option>
-                    <option>Lost</option>
-                    <option>Lonely</option>
-                  </select>
-                </div>
-                <div>
-                  <label for="email">Email <span class="hint-inline">(human reply only)</span></label>
-                  <input type="email" id="email" autocomplete="email" placeholder="your@email.com" />
-                  <div class="hint">Not needed for the free on-page reflection.</div>
-                </div>
-              </div>
-
-              <label for="mode">Choose advice type <span class="req">*</span></label>
-              <select id="mode" required>
-                <option value="" disabled selected>Select</option>
-                <option value="instant">Free — instant automated reflection on this page</option>
-                <option value="human10">Human — thoughtful email reply (€10)</option>
-              </select>
-              <div class="mode-note">
-                The free response is generated locally from this page's built-in reflection prompts. The €10 option is read and answered by a human.
-              </div>
-
-              <button type="submit" class="btn-primary">Get anonymous advice →</button>
-            </form>
-
-            <div id="status" class="status" role="status" aria-live="polite"></div>
-
-            <div id="aiChatCard" class="card chat-card" style="display:none;" aria-live="polite">
-              <div class="chat-header">Instant reflection</div>
-              <div id="chatBody" class="chat-body"></div>
-              <div id="typing" class="typing">Preparing a reflection…</div>
-              <div class="chat-meta">
-                <span>This is a reflection tool, not professional advice.</span>
-              </div>
+            <div class="submit-row">
+              <button class="button button-primary" type="submit">Continue →</button>
             </div>
+          </form>
 
-            <div id="premiumFlow" class="premium-card">
-              <div class="premium-header">
-                <div class="premium-title">Human advice by email</div>
-                <div class="premium-price">€10</div>
-              </div>
-              <div class="premium-sub">
-                A human reads your situation and sends a thoughtful, structured reply with perspective and possible next steps.
-              </div>
-              <ul class="premium-bullets">
-                <li><span class="bullet-dot">•</span><span>Useful for complicated choices or situations where you feel stuck.</span></li>
-                <li><span class="bullet-dot">•</span><span>One written response sent privately by email.</span></li>
-                <li><span class="bullet-dot">•</span><span>Target reply time: 24–72 hours, excluding weekends and holidays.</span></li>
-              </ul>
-              <div class="premium-steps">
-                <strong>How it works:</strong><br />
-                1) Pay €10 securely via PayPal.<br />
-                2) Click “Open email to send request”.<br />
-                3) Send the pre-filled message and receive your reply by email.
-              </div>
-              <div class="cta-row">
-                <a id="payPayPal" class="button-link" href="#" target="_blank" rel="noopener noreferrer">Pay €10 with PayPal</a>
-                <a id="mailtoBtn" class="button-link secondary" href="#">Open email to send request</a>
-              </div>
+          <div id="status" class="status" role="status" aria-live="polite"></div>
+
+          <div id="freeBox" class="next-box">
+            <h3>Your free request is ready</h3>
+            <p>Click below. Your email app will open with your request already filled in. Just press send.</p>
+            <div class="next-actions">
+              <a id="freeEmailBtn" class="button button-primary" href="#">Send free request</a>
+            </div>
+          </div>
+
+          <div id="paidBox" class="next-box">
+            <h3>Detailed personal reply — €10</h3>
+            <p>Pay securely with PayPal, then send the prepared email request.</p>
+            <div class="next-actions">
+              <a id="payPayPal" class="button button-primary" href="https://www.paypal.com/ncp/payment/DYJF6RCXMV8YJ" target="_blank" rel="noopener noreferrer">Pay €10 with PayPal</a>
+              <a id="paidEmailBtn" class="button button-secondary" href="#">Send my request</a>
             </div>
           </div>
         </div>
 
-        <aside>
-          <div class="card">
-            <div class="side-card-title">What can I ask advice about?</div>
-            <div class="side-card-body">
-              You can ask for an outside perspective on everyday personal situations, including:
-              <ul class="side-list">
-                <li><span class="tick">✓</span><span>Relationships, dating, friendship and family tensions</span></li>
-                <li><span class="tick">✓</span><span>Career choices, workplace problems and changing jobs</span></li>
-                <li><span class="tick">✓</span><span>Difficult decisions and feeling unsure what to do next</span></li>
-                <li><span class="tick">✓</span><span>Loneliness, motivation, grief and academic pressure</span></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="card" id="privacy">
-            <div class="side-card-title">Privacy in the free version</div>
-            <div class="side-card-body">
-              <ul class="side-list">
-                <li><span class="tick">✓</span><span>No AnonymAdvice account is required.</span></li>
-                <li><span class="tick">✓</span><span>Your free response is produced by JavaScript in your browser.</span></li>
-                <li><span class="tick">✓</span><span>The text you type is not submitted to AnonymAdvice by the free-response form.</span></li>
-                <li><span class="tick">✓</span><span>For human advice, your email is sent using your own email application.</span></li>
-              </ul>
-              <div class="privacy-note">
-                
-              </div>
-            </div>
-          </div>
-        </aside>
+        <p class="trust">
+          AnonymAdvice offers general personal perspective, not medical, psychological, legal, financial or emergency services.
+        </p>
       </section>
-
-      <!-- Search-friendly, useful content kept in normal HTML so crawlers and visitors can read it. -->
-      <div class="content-wrap">
-        <section class="seo-section" id="topics" aria-labelledby="topics-title">
-          <div class="eyebrow">Advice topics</div>
-          <h2 id="topics-title">Get honest advice for the situations people often keep to themselves</h2>
-          <p class="intro">
-            AnonymAdvice is for moments when you want a neutral outside perspective before talking to someone you know. You might be deciding whether to stay in a relationship, accept a job, confront a friend, change direction, or simply make sense of thoughts that keep circling in your head.
-          </p>
-
-          <div class="topic-grid">
-            <div class="topic-card">
-              <h3>Anonymous relationship advice</h3>
-              <p>Talk through dating uncertainty, communication problems, breakups, boundaries, trust and difficult relationship decisions.</p>
-            </div>
-            <div class="topic-card">
-              <h3>Work and career advice</h3>
-              <p>Think through job offers, conflicts at work, career changes, burnout, moving for work and questions about professional direction.</p>
-            </div>
-            <div class="topic-card">
-              <h3>Life advice and direction</h3>
-              <p>Get perspective when you feel lost, behind, uncertain about your next chapter, or torn between two possible paths.</p>
-            </div>
-            <div class="topic-card">
-              <h3>Decision-making advice</h3>
-              <p>Separate facts, fears, trade-offs and priorities when both choices feel difficult or when overthinking is blocking action.</p>
-            </div>
-            <div class="topic-card">
-              <h3>Academic and PhD stress</h3>
-              <p>Reflect on pressure, motivation, supervisor problems, imposter feelings, uncertainty and the emotional weight of long research projects.</p>
-            </div>
-            <div class="topic-card">
-              <h3>Loneliness, grief and motivation</h3>
-              <p>Put difficult feelings into words and consider small, practical next steps without turning the conversation into a public post.</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="seo-section" id="how-it-works" aria-labelledby="how-title">
-          <div class="eyebrow">How AnonymAdvice works</div>
-          <h2 id="how-title">Ask for advice online without creating an account</h2>
-          <p class="intro">
-            You do not need to publish your problem to a forum or attach your real identity to it. Start by choosing a topic and writing the situation in your own words. The free option gives you an immediate automated reflection. If you want a more detailed human perspective, you can choose the paid email reply.
-          </p>
-
-          <div class="steps">
-            <div class="step">
-              <div class="step-num">1</div>
-              <h3>Describe the situation</h3>
-              <p>Write what happened, what is bothering you, and what decision or question you are struggling with. Names are not necessary.</p>
-            </div>
-            <div class="step">
-              <div class="step-num">2</div>
-              <h3>Get a first reflection</h3>
-              <p>Use the free instant tool to get a calm prompt that may help you look at the situation from another angle.</p>
-            </div>
-            <div class="step">
-              <div class="step-num">3</div>
-              <h3>Choose human advice if needed</h3>
-              <p>If the situation is complex, the €10 option gives you a written human reply sent privately by email.</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="seo-section" id="questions" aria-labelledby="questions-title">
-          <div class="eyebrow">Common real-life questions</div>
-          <h2 id="questions-title">Questions you can ask anonymously</h2>
-          <p class="intro">
-            You do not need to phrase your situation perfectly. People often look for honest advice when they are embarrassed, afraid of being judged, or simply want a neutral opinion before acting.
-          </p>
-          <ul class="question-list">
-            <li>“Should I stay in this relationship or am I ignoring signs that it is not working?”</li>
-            <li>“I received a better job offer, but I am scared I will regret leaving. How should I think about it?”</li>
-            <li>“Was I wrong in this argument, or am I being manipulated into feeling guilty?”</li>
-            <li>“I feel behind everyone else in life. What should I focus on first?”</li>
-            <li>“My PhD is making me miserable. How do I know whether I should continue or change direction?”</li>
-            <li>“I want to tell someone how I feel, but I am afraid it will damage the relationship. What should I consider?”</li>
-          </ul>
-        </section>
-
-        <section class="seo-section" aria-labelledby="honest-title">
-          <div class="eyebrow">A second perspective</div>
-          <h2 id="honest-title">What “honest advice” means here</h2>
-          <p class="intro">
-            Honest advice does not mean telling you what you want to hear or pretending there is one perfect answer. The aim is to help you notice trade-offs, assumptions, boundaries, risks and next steps that may be difficult to see when you are emotionally close to the situation.
-          </p>
-          <p>
-            For the free tool, the response is intentionally simple: it is an automated reflection based on the topic and mood you select. It does not diagnose you and it does not know facts you have not provided. The paid human option is intended for people who want a longer, more contextual response.
-          </p>
-        </section>
-
-        <section class="seo-section" id="faq" aria-labelledby="faq-title">
-          <div class="eyebrow">Frequently asked questions</div>
-          <h2 id="faq-title">Anonymous advice FAQ</h2>
-
-          <details>
-            <summary>Can I ask for advice completely anonymously?</summary>
-            <p>You do not need an account for the free reflection and you can leave out your name and identifying details. If you choose the human email reply, an email address is needed so a response can be sent back to you.</p>
-          </details>
-
-          <details>
-            <summary>Is the free response really AI?</summary>
-            <p>The current free version is an automated reflection tool built into the page. It selects relevant reflection prompts based on the topic and mood you choose; it is not a conversational AI model reading and analyzing your full story.</p>
-          </details>
-
-          <details>
-            <summary>What kind of advice can I ask for?</summary>
-            <p>You can ask for general perspective on relationships, work, career, life direction, difficult decisions, motivation, loneliness, grief, academic pressure and many other everyday personal situations.</p>
-          </details>
-
-          <details>
-            <summary>How does the €10 human advice option work?</summary>
-            <p>Choose the human option, pay through PayPal, then use the email button to send your request. The target response time is 24–72 hours excluding weekends and holidays.</p>
-          </details>
-
-          <details>
-            <summary>Is this therapy, medical advice or legal advice?</summary>
-            <p>No. AnonymAdvice provides general reflective support and personal perspective only. It does not replace licensed medical, mental-health, legal, financial or emergency services.</p>
-          </details>
-
-          <details>
-            <summary>What should I do if I am in immediate danger or crisis?</summary>
-            <p>Do not rely on this website for emergency support. Contact the emergency services or an appropriate professional crisis service in your location.</p>
-          </details>
-        </section>
-      </div>
     </main>
 
-    <footer id="contact">
-      <div class="footer-links">
-        <a href="#get-advice">Get advice</a>
-        <a href="#topics">Advice topics</a>
-        <a href="#faq">FAQ</a>
-        <a href="#privacy">Privacy</a>
-      </div>
-      <p>
-        <strong>Contact:</strong> <a href="mailto:contact@anonymadvice.com">contact@anonymadvice.com</a>
-      </p>
-      <p>
-        Payments are processed by PayPal. AnonymAdvice is not therapy, medical care, legal counsel, financial advice or an emergency service.
-      </p>
-      <p>© <span id="year"></span> AnonymAdvice.</p>
+    <footer>
+      <p><strong>AnonymAdvice</strong> — honest private perspective without a public post.</p>
+      <p>Contact: <a href="mailto:contact@anonymadvice.com">contact@anonymadvice.com</a></p>
+      <p>Anonymous means no account or public identity is required. Standard website analytics may collect technical information and approximate location.</p>
+      <p>© <span id="year"></span> AnonymAdvice</p>
     </footer>
   </div>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const CONFIG = {
-        OWNER_EMAIL: "contact@anonymadvice.com",
-        PAYPAL_URL_10: "https://www.paypal.com/ncp/payment/DYJF6RCXMV8YJ",
-        BRAND_NAME: "AnonymAdvice"
-      };
-
-      const REFLECTIONS = {
-        "Life & direction": [
-          "When you feel pulled in different directions, separate what you genuinely want from what you think other people expect from you. Write down the three values you most want your next decision to protect.",
-          "You may not need a complete life plan. Ask what small experiment would give you useful information without locking you into a permanent choice.",
-          "Imagine that both paths are reasonable. Which option would teach you more about the kind of life you actually want to build?",
-          "Try looking at the decision from one year in the future. Which choice would you be more disappointed not to have explored?"
-        ],
-        "Stress & anxiety": [
-          "When everything feels urgent, divide the situation into what needs action today, what can wait, and what is outside your control. Choose only one next step from the first group.",
-          "Anxiety can make possibilities feel like facts. Write down what you know for certain, what you fear might happen, and what evidence would change your mind.",
-          "If your mind is looping, ask what decision is actually required now. Sometimes the immediate task is smaller than the entire problem your mind is trying to solve at once.",
-          "Give yourself a concrete time to revisit the issue. A boundary around thinking can be more useful than trying to force uncertainty to disappear."
-        ],
-        "Work & career": [
-          "Compare the options using a few criteria that matter to you personally: learning, stability, income, autonomy, location, people and future opportunities. Do not let one impressive feature hide everything else.",
-          "Ask whether the problem is the job itself, the environment around it, or a temporary difficult period. Those three problems usually need different solutions.",
-          "A useful career move does not have to be perfect. It should improve the direction of travel. What would this choice make easier for you one or two years from now?",
-          "Before making a large change, consider one low-risk conversation or experiment that could give you better information about the situation."
-        ],
-        "Relationships": [
-          "Focus less on one argument and more on the pattern. Can both of you express needs, repair conflict and take responsibility, or does the same hurt repeat without meaningful change?",
-          "Try separating what the other person actually said or did from what you fear it means. Then ask what you need in order to feel respected and secure.",
-          "A difficult conversation can be clearer when you describe the behavior, its effect on you, and the change you are asking for rather than arguing about intentions.",
-          "Ask yourself whether you are staying because the relationship is good enough now, or because you are hoping it will eventually become something very different."
-        ],
-        "Health & habits": [
-          "For general habits, make the next step small enough that you can repeat it even on a difficult day. Consistency usually matters more than intensity.",
-          "Look for the trigger around the habit: time, place, emotion or situation. Changing the environment can sometimes be easier than relying on willpower.",
-          "If this involves symptoms, medication, diagnosis or a health risk, use a qualified healthcare professional rather than relying on this website.",
-          "Instead of trying to change everything at once, choose one behavior you can measure for a week and see what you learn."
-        ],
-        "Loss & grief": [
-          "Grief rarely follows a clean timetable. It can help to ask what you need today rather than judging whether you should be feeling differently by now.",
-          "You do not have to choose between remembering someone and continuing with your life. Both can exist at the same time.",
-          "If talking feels difficult, consider one private ritual, memory, letter or conversation that gives the loss somewhere to be expressed.",
-          "When grief becomes overwhelming or you are struggling to function or stay safe, professional support is more appropriate than an advice website."
-        ],
-        "PhD / academic stress": [
-          "Separate the academic problem from the emotional story around it. What is the next concrete research task, and what is the fear you are attaching to that task?",
-          "A PhD can make slow progress feel like failure. Try defining a successful week using actions you control rather than outcomes such as perfect results or approval.",
-          "If your supervisor relationship is part of the problem, write down the specific support or decision you need before the next meeting instead of going in with only a general sense of frustration.",
-          "Consider whether you need a better plan, a boundary, a conversation, a break, or a genuine change of direction. Those are different problems and should not all be treated as lack of motivation."
-        ],
-        "Loneliness": [
-          "Loneliness can make you wait until you feel confident enough to reach out. Try reversing that: choose one small interaction first and let confidence come later.",
-          "Think about what kind of connection is missing: companionship, emotional intimacy, shared activity, belonging or simply regular contact. The answer can suggest a more specific next step.",
-          "Repeated small contact often builds connection better than waiting for one perfect deep conversation.",
-          "If isolation is becoming severe or connected to thoughts of harming yourself, contact appropriate professional or crisis support in your location."
-        ],
-        "Motivation": [
-          "Motivation often appears after starting, not before. Reduce the task until the first action feels almost too small to avoid.",
-          "Ask whether the real problem is low motivation, unclear priorities, exhaustion, fear of failure or a task you no longer believe in. The solution depends on which one is true.",
-          "Choose a finish line for today that is specific and modest. A completed small task can create more momentum than an ambitious plan you keep postponing.",
-          "Reconnect the task to a reason that matters to you personally. If you cannot find one, that may be useful information rather than a character flaw."
-        ],
-        "Decision-making": [
-          "List the options and ask four questions: What do I gain? What do I give up? What risk can I tolerate? What information am I still missing?",
-          "Notice whether you are comparing a realistic version of one option with an idealized version of the other. Try to compare both under equally realistic assumptions.",
-          "If the decision is reversible, you may not need certainty. You may only need enough confidence to test one direction and learn from it.",
-          "Ask which consequence you could live with more easily if the choice does not work out as hoped."
-        ],
-        "Self-esteem": [
-          "Try to identify the standard you are using to judge yourself. Would you apply the same standard to someone you respect in the same situation?",
-          "Separate a disappointing outcome from a global conclusion about who you are. One result can contain useful information without defining your worth.",
-          "Choose one action that reflects self-respect even if your confidence has not caught up yet: a boundary, a request, finishing a task, or asking for help.",
-          "If your self-criticism is constant, write down the exact sentence you keep telling yourself and test whether it is fully true, partly true, or an emotional conclusion."
-        ],
-        "Other": [
-          "Try describing the problem in one sentence, then write what you most want to be different. The gap between those two statements often reveals the real question.",
-          "Ask what part of the situation you can influence directly, what requires a conversation with someone else, and what you may have to accept for now.",
-          "When a problem feels tangled, separate facts, interpretations, emotions and decisions. You do not have to solve all four at the same time.",
-          "Imagine giving advice to someone you care about who was in exactly the same situation. What would you want them to protect, question or do next?"
-        ]
-      };
-
-      const MOOD_TIPS = {
-        "Confused": "Because you selected ‘Confused’, try not to force a final answer immediately. First identify what information or value would make the choice clearer.",
-        "Anxious": "Because you selected ‘Anxious’, distinguish the most likely outcome from the most frightening outcome. Anxiety often makes them feel identical.",
-        "Sad": "Because you selected ‘Sad’, give the emotional part of the situation some space before making a major irreversible decision if you safely can.",
-        "Angry": "Because you selected ‘Angry’, look for the boundary, expectation or sense of fairness underneath the anger before deciding how to respond.",
-        "Hopeful": "Because you selected ‘Hopeful’, turn that energy into one concrete next action rather than trying to solve the entire situation today.",
-        "Lost": "Because you selected ‘Lost’, focus on choosing a direction for the next step rather than demanding a complete map of the future.",
-        "Lonely": "Because you selected ‘Lonely’, consider whether part of the decision is being shaped by the need for connection, reassurance or belonging.",
-        "Neutral": "Try to use the relative calm of a neutral moment to separate what you know from what you are assuming."
-      };
+      const OWNER_EMAIL = "contact@anonymadvice.com";
+      const PAYPAL_URL = "https://www.paypal.com/ncp/payment/DYJF6RCXMV8YJ";
 
       const form = document.getElementById("adviceForm");
       const statusEl = document.getElementById("status");
-      const chatCard = document.getElementById("aiChatCard");
-      const chatBody = document.getElementById("chatBody");
-      const typingEl = document.getElementById("typing");
-      const premiumFlow = document.getElementById("premiumFlow");
-      const mailtoBtn = document.getElementById("mailtoBtn");
+      const freeBox = document.getElementById("freeBox");
+      const paidBox = document.getElementById("paidBox");
+      const freeEmailBtn = document.getElementById("freeEmailBtn");
+      const paidEmailBtn = document.getElementById("paidEmailBtn");
       const payPayPal = document.getElementById("payPayPal");
-      const year = document.getElementById("year");
 
-      year.textContent = new Date().getFullYear();
-      payPayPal.href = CONFIG.PAYPAL_URL_10;
+      document.getElementById("year").textContent = new Date().getFullYear();
+      payPayPal.href = PAYPAL_URL;
 
-      function showStatus(message, type = "ok") {
-        if (!message) {
-          statusEl.style.display = "none";
-          statusEl.textContent = "";
-          return;
+      function analyticsEvent(name, params = {}) {
+        if (typeof gtag === "function") {
+          gtag("event", name, params);
         }
-        statusEl.style.display = "block";
-        statusEl.textContent = message;
-        statusEl.className = "status " + type;
       }
 
-      function buildReflection(topic, mood, message) {
-        const responses = REFLECTIONS[topic] || REFLECTIONS.Other;
-        const base = responses[Math.floor(Math.random() * responses.length)];
-        const moodTip = MOOD_TIPS[mood] || "";
-        const lengthTip = message.length > 800
-          ? "You shared a lot of detail. Before acting, try reducing the situation to the two or three facts that would matter most to the decision."
-          : "If you want to think further, write one sentence answering: ‘What am I most afraid will happen if I choose wrong?’";
+      function buildMailto(type, topic, message, email) {
+        const paid = type === "paid";
+        const subject = encodeURIComponent(
+          `[AnonymAdvice] ${paid ? "Detailed €10 reply" : "Free short reply"} — ${topic}`
+        );
 
-        return `${base}\n\n${moodTip}\n\n${lengthTip}\n\nA useful next step is to ask yourself what outcome you are trying to protect, what trade-off you are willing to accept, and what small action could give you better information.`;
-      }
-
-      function renderChat(userMessage, reflection, mood) {
-        chatBody.innerHTML = "";
-
-        const userRow = document.createElement("div");
-        userRow.className = "chat-row user";
-        const userBubble = document.createElement("div");
-        userBubble.className = "chat-bubble user";
-        userBubble.textContent = userMessage;
-        userRow.appendChild(userBubble);
-        chatBody.appendChild(userRow);
-
-        const responseRow = document.createElement("div");
-        responseRow.className = "chat-row ai";
-        const responseBubble = document.createElement("div");
-        responseBubble.className = "chat-bubble ai";
-        responseBubble.textContent = reflection;
-        responseRow.appendChild(responseBubble);
-        chatBody.appendChild(responseRow);
-
-        const meta = document.createElement("div");
-        meta.className = "chat-meta";
-        meta.innerHTML = `<span>Mood: ${escapeHtml(mood)}</span><span>Automated reflection from ${CONFIG.BRAND_NAME}</span>`;
-        chatBody.appendChild(meta);
-        chatBody.scrollTop = chatBody.scrollHeight;
-      }
-
-      function escapeHtml(value) {
-        return String(value)
-          .replaceAll("&", "&amp;")
-          .replaceAll("<", "&lt;")
-          .replaceAll(">", "&gt;")
-          .replaceAll('"', "&quot;")
-          .replaceAll("'", "&#039;");
-      }
-
-      function updateMailto(topic, mood, message, email) {
-        const subject = encodeURIComponent(`[${CONFIG.BRAND_NAME}] Human advice request — ${topic}`);
         const body = encodeURIComponent(
-`Topic: ${topic}
-Mood: ${mood}
-Reply email: ${email || "Please reply to the email address I am sending from"}
+`Reply type: ${paid ? "Detailed personal reply (€10)" : "First short personal reply (free)"}
+Topic: ${topic}
+Reply email: ${email}
 
 My situation:
 ${message}
 
-Payment: I have paid €10 via PayPal (transaction ID: ...)
+${paid ? "Payment: I have paid €10 via PayPal (transaction ID: ...)" : "This is my first free short-reply request."}
 
 I prefer to remain anonymous.`
         );
-        mailtoBtn.href = `mailto:${CONFIG.OWNER_EMAIL}?subject=${subject}&body=${body}`;
+
+        return `mailto:${OWNER_EMAIL}?subject=${subject}&body=${body}`;
       }
 
       form.addEventListener("submit", (event) => {
@@ -1052,46 +721,54 @@ I prefer to remain anonymous.`
 
         const topic = document.getElementById("topic").value;
         const message = document.getElementById("message").value.trim();
-        const mood = document.getElementById("mood").value;
-        const mode = document.getElementById("mode").value;
         const email = document.getElementById("email").value.trim();
+        const replyType = document.querySelector('input[name="replyType"]:checked')?.value;
 
-        showStatus("");
-        typingEl.style.display = "none";
+        freeBox.style.display = "none";
+        paidBox.style.display = "none";
+        statusEl.style.display = "none";
 
-        if (!topic || !message || !mode) {
-          showStatus("Please fill in the topic, your situation, and the advice type.", "warn");
+        if (!topic || !message || !email || !replyType) {
+          statusEl.textContent = "Please complete the topic, message and email.";
+          statusEl.className = "status warn";
+          statusEl.style.display = "block";
           return;
         }
 
-        if (mode === "instant") {
-          premiumFlow.style.display = "none";
-          chatCard.style.display = "block";
-          typingEl.style.display = "block";
-          chatBody.innerHTML = "";
+        analyticsEvent("advice_form_continue", {
+          advice_topic: topic,
+          reply_type: replyType
+        });
 
-          const reflection = buildReflection(topic, mood, message);
-          window.setTimeout(() => {
-            typingEl.style.display = "none";
-            renderChat(message, reflection, mood);
-            showStatus("Your instant reflection is ready below.", "ok");
-            chatCard.scrollIntoView({ behavior: "smooth", block: "nearest" });
-          }, 350);
+        if (replyType === "free") {
+          freeEmailBtn.href = buildMailto("free", topic, message, email);
+          freeBox.style.display = "block";
+          statusEl.textContent = "Ready. Send the prepared email to receive your first short reply.";
+          statusEl.className = "status";
+          statusEl.style.display = "block";
+          analyticsEvent("free_reply_selected", { advice_topic: topic });
+          freeBox.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        } else {
+          paidEmailBtn.href = buildMailto("paid", topic, message, email);
+          paidBox.style.display = "block";
+          statusEl.textContent = "Ready. Pay €10, then send the prepared email request.";
+          statusEl.className = "status";
+          statusEl.style.display = "block";
+          analyticsEvent("paid_reply_selected", { advice_topic: topic });
+          paidBox.scrollIntoView({ behavior: "smooth", block: "nearest" });
         }
+      });
 
-        if (mode === "human10") {
-          if (!email) {
-            showStatus("Please add an email address so a human reply can be sent to you.", "warn");
-            document.getElementById("email").focus();
-            return;
-          }
+      freeEmailBtn.addEventListener("click", () => {
+        analyticsEvent("free_email_request_click");
+      });
 
-          chatCard.style.display = "none";
-          updateMailto(topic, mood, message, email);
-          premiumFlow.style.display = "block";
-          showStatus("Your human-advice request is ready. Pay €10 with PayPal, then use the email button to send your request.", "ok");
-          premiumFlow.scrollIntoView({ behavior: "smooth", block: "nearest" });
-        }
+      paidEmailBtn.addEventListener("click", () => {
+        analyticsEvent("paid_email_request_click");
+      });
+
+      payPayPal.addEventListener("click", () => {
+        analyticsEvent("paypal_click", { value: 10, currency: "EUR" });
       });
     });
   </script>
