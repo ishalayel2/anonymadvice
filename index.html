@@ -1,80 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google Analytics: keep this at the top -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHG16C7HC1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-SHG16C7HC1');
-  </script>
-
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>Anonymous Advice Online | Honest Private Advice — AnonymAdvice</title>
-  <!-- AnonymAdvice favicon -->
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
-  <meta name="description" content="Get honest anonymous advice about work, life, decisions, PhD stress, loneliness, grief and motivation. Your first short personal reply is free. No account or public post." />
+  <title>Human Advice Online | Private Personal Advice — AnonymAdvice</title>
+  <meta name="description" content="In a world full of AI, sometimes you just need a real person. Get thoughtful, private human advice about life, work and decisions. Starting at €5." />
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
   <link rel="canonical" href="https://anonymadvice.com/" />
   <link rel="sitemap" type="application/xml" href="https://anonymadvice.com/sitemap.xml" />
   <meta name="theme-color" content="#fffaf0" />
+  <!-- Keep the existing AnonymAdvice favicon and icons -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="AnonymAdvice" />
   <meta property="og:url" content="https://anonymadvice.com/" />
-  <meta property="og:title" content="Anonymous Advice Online | AnonymAdvice" />
-  <meta property="og:description" content="Tell us what is going on. Your first short personal reply is free. No account, no public post." />
+  <meta property="og:title" content="Human Advice in an AI World | AnonymAdvice" />
+  <meta property="og:description" content="A real person reads your story and responds privately. No public posts. Thoughtful advice from €5." />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Anonymous Advice Online | AnonymAdvice" />
-  <meta name="twitter:description" content="Honest, private advice without a public post. First short personal reply free." />
-
-
+  <meta name="twitter:title" content="Human Advice in an AI World | AnonymAdvice" />
+  <meta name="twitter:description" content="Private human advice from €5. No account or public post." />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://anonymadvice.com/#website",
-        "url": "https://anonymadvice.com/",
-        "name": "AnonymAdvice",
-        "alternateName": "Anonymous Advice",
-        "description": "Anonymous online advice for work, life direction, decisions, academic stress, loneliness, grief and motivation.",
-        "inLanguage": "en"
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://anonymadvice.com/#webpage",
-        "url": "https://anonymadvice.com/",
-        "name": "Anonymous Advice Online | Honest Private Advice — AnonymAdvice",
-        "description": "Share your situation privately and receive a short personal reply for free, with an optional deeper paid reply.",
-        "isPartOf": {"@id": "https://anonymadvice.com/#website"},
-        "inLanguage": "en"
-      },
-      {
-        "@type": "Service",
-        "@id": "https://anonymadvice.com/#service",
-        "name": "AnonymAdvice",
-        "provider": {"@type": "Organization", "name": "AnonymAdvice"},
-        "areaServed": "Worldwide",
-        "description": "Private written perspective on everyday personal situations.",
-        "offers": [
-          {"@type": "Offer", "name": "First short personal reply", "price": "0", "priceCurrency": "EUR"},
-          {"@type": "Offer", "name": "Detailed personal reply", "price": "10", "priceCurrency": "EUR"}
-        ]
-      }
+      {"@type":"WebSite","@id":"https://anonymadvice.com/#website","url":"https://anonymadvice.com/","name":"AnonymAdvice","alternateName":"Anonymous Advice","inLanguage":"en"},
+      {"@type":"WebPage","@id":"https://anonymadvice.com/#webpage","url":"https://anonymadvice.com/","name":"Human Advice Online | AnonymAdvice","description":"Private, human-reviewed written advice starting at €5.","isPartOf":{"@id":"https://anonymadvice.com/#website"},"inLanguage":"en"},
+      {"@type":"Service","@id":"https://anonymadvice.com/#service","name":"AnonymAdvice","areaServed":"Worldwide","description":"Written human perspective on everyday personal situations.","offers":[
+        {"@type":"Offer","name":"Quick Advice","price":"5","priceCurrency":"EUR"},
+        {"@type":"Offer","name":"Personal Advice","price":"10","priceCurrency":"EUR"},
+        {"@type":"Offer","name":"Priority Advice","price":"20","priceCurrency":"EUR"}
+      ]}
     ]
   }
   </script>
-
-  <style>
+  <!-- Google Analytics loads only if the visitor accepts analytics cookies below. -->
+<style>
     :root {
       --bg: #fffaf0;
       --surface: #ffffff;
@@ -496,9 +461,49 @@
       .topics, .offer-strip, .choice-grid { grid-template-columns: 1fr; }
       .advice-card { padding: 18px; }
     }
+  
+
+    /* Minimal additions for the new three-tier paid advice flow */
+    .hero h1 { max-width: 950px; font-size: clamp(34px, 5.7vw, 56px); line-height: 1.08; }
+    .offer-strip, .choice-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .offer { min-width: 0; }
+    .offer span { display: block; }
+    .offer .price { color: var(--text); font-size: 21px; font-weight: 900; }
+    .offer .time { display: block; font-weight: 750; color: #655016; margin-top: 7px; }
+    .offer.popular { border-color: #e7bb52; background: #fff9eb; }
+    .offer.priority { border-color: #dfd7c6; background: #fffcf6; }
+    .choice-content { min-height: 115px; }
+    .choice:focus-within .choice-content { outline: 3px solid rgba(230,168,23,.3); outline-offset: 2px; }
+    .service-note { color: var(--muted); font-size: 12px; margin: 12px 0 18px; }
+    .how-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; max-width: 900px; margin: 0 auto; }
+    .how-step { padding: 20px 15px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); }
+    .how-step .step-number { display: inline-grid; place-items: center; width: 29px; height: 29px; border-radius: 50%; background: var(--surface-soft); color: #7c5d18; font-weight: 850; }
+    .how-step h3 { font-size: 16px; margin: 11px 0 5px; }
+    .how-step p { font-size: 13px; margin: 0; color: var(--muted); }
+    .checkline { display: flex; align-items: flex-start; gap: 10px; font-size: 12px; color: var(--muted); font-weight: 400; line-height: 1.5; }
+    .checkline input { margin-top: 3px; flex: 0 0 auto; accent-color: #bc8611; }
+    .checkline a, .service-note a { color: var(--accent-dark); }
+    .checkline + .checkline { margin-top: 10px; }
+    .info-list { max-width: 760px; margin: 24px auto 0; }
+    .info-list details { border-bottom: 1px solid var(--line); padding: 13px 4px; }
+    .info-list summary { cursor: pointer; font-weight: 760; font-size: 14px; }
+    .info-list details p, .info-list details li { font-size: 13px; color: var(--muted); }
+    .info-list details ul { padding-left: 23px; }
+    .info-list a { color: var(--accent-dark); }
+    .next-actions .button { text-align: center; }
+    .next-help { margin-top: 10px !important; font-size: 12px !important; }
+    .note-strong { color: var(--text); font-weight: 750; }
+    .cookie-banner { position: fixed; bottom: 14px; left: 50%; transform: translateX(-50%); width: min(650px,calc(100% - 24px)); z-index: 20; display: none; background: #fff; border: 1px solid var(--line); box-shadow: 0 9px 35px rgba(0,0,0,.13); border-radius: 14px; padding: 15px; }
+    .cookie-banner p { font-size: 13px; margin: 0 0 9px; }
+    .cookie-banner .button { min-height: 38px; padding: 0 15px; font-size: 13px; }
+    .cookie-actions { display: flex; gap: 9px; flex-wrap: wrap; }
+    .footer-links { display: flex; gap: 15px; flex-wrap: wrap; align-items: center; justify-content: center; }
+    .text-button { background: none; border: none; color: var(--accent-dark); text-decoration: underline; cursor: pointer; padding: 0; font: inherit; }
+    @media (max-width: 900px) { .offer-strip, .choice-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 650px) { .how-grid { grid-template-columns: 1fr; } .hero h1 { font-size: clamp(33px, 9vw, 44px); } }
+
   </style>
 </head>
-
 <body>
   <div class="page">
     <header>
@@ -510,80 +515,55 @@
     </header>
 
     <main>
-      <section class="hero">
-        <div class="hero-badge">Anonymous advice from a real person</div>
-        <h1>Tell someone what is really going on.</h1>
-        <p>
-          Share your situation privately and get an honest outside perspective.
-          Your first short personal reply is free.
-        </p>
-
+      <section class="hero" aria-labelledby="mainHeading">
+        <div class="hero-badge">A real person reads every request</div>
+        <h1 id="mainHeading">In a world full of AI, sometimes you just need a real person.</h1>
+        <p>Share your situation privately and receive honest, thoughtful advice from a real human. Starting at just €5.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="#ask">Ask for advice →</a>
-          <a class="button button-secondary" href="#topics">What can I ask?</a>
+          <a class="button button-secondary" href="#how">How it works</a>
         </div>
-
         <div class="promise-row">
           <span>No account</span>
-          <span>No public profile</span>
-          <span>First short reply free</span>
+          <span>No public post</span>
+          <span>No subscription</span>
         </div>
       </section>
 
       <section class="section" id="topics">
         <h2 class="section-title">What can you ask about?</h2>
-        <p class="section-sub">Choose any everyday situation where you want a neutral outside perspective.</p>
-
+        <p class="section-sub">Everyday situations where you want a thoughtful outside perspective.</p>
         <div class="topics">
-          <article class="topic">
-            <div class="topic-icon" aria-hidden="true">💼</div>
-            <h3>Work and career</h3>
-            <p>Jobs, workplace problems, career changes and professional choices.</p>
-          </article>
+          <article class="topic"><div class="topic-icon" aria-hidden="true">💼</div><h3>Work and career</h3><p>Jobs, workplace problems, career changes and professional choices.</p></article>
+          <article class="topic"><div class="topic-icon" aria-hidden="true">🧭</div><h3>Life advice and direction</h3><p>Feeling stuck, changing direction or wondering what to do next.</p></article>
+          <article class="topic"><div class="topic-icon" aria-hidden="true">⚖️</div><h3>Decision-making</h3><p>When both choices feel difficult and you need another perspective.</p></article>
+          <article class="topic"><div class="topic-icon" aria-hidden="true">🎓</div><h3>Academic and PhD stress</h3><p>Pressure, motivation, supervisors, uncertainty and research life.</p></article>
+          <article class="topic"><div class="topic-icon" aria-hidden="true">🌙</div><h3>Loneliness, grief and motivation</h3><p>Putting difficult thoughts into words without judgment.</p></article>
+        </div>
+      </section>
 
-          <article class="topic">
-            <div class="topic-icon" aria-hidden="true">🧭</div>
-            <h3>Life advice and direction</h3>
-            <p>Feeling stuck, changing direction or wondering what to do next.</p>
-          </article>
-
-          <article class="topic">
-            <div class="topic-icon" aria-hidden="true">⚖️</div>
-            <h3>Decision-making</h3>
-            <p>When both choices feel difficult and you need another perspective.</p>
-          </article>
-
-          <article class="topic">
-            <div class="topic-icon" aria-hidden="true">🎓</div>
-            <h3>Academic and PhD stress</h3>
-            <p>Pressure, motivation, supervisors, uncertainty and research life.</p>
-          </article>
-
-          <article class="topic">
-            <div class="topic-icon" aria-hidden="true">🌙</div>
-            <h3>Loneliness, grief and motivation</h3>
-            <p>When you need to put difficult thoughts into words without judgment.</p>
-          </article>
+      <section class="section" id="how">
+        <h2 class="section-title">How it works</h2>
+        <p class="section-sub">Three simple steps. No account or public profile required.</p>
+        <div class="how-grid">
+          <div class="how-step"><span class="step-number">1</span><h3>Tell us your situation</h3><p>Choose a topic and write your question privately.</p></div>
+          <div class="how-step"><span class="step-number">2</span><h3>Choose your advice</h3><p>Select €5, €10 or €20. Follow the clear payment instructions.</p></div>
+          <div class="how-step"><span class="step-number">3</span><h3>Get a personal reply</h3><p>A real person reads your request and responds to your email.</p></div>
         </div>
       </section>
 
       <section class="section" id="ask">
-        <h2 class="section-title">Ask anonymously</h2>
-        <p class="section-sub">No name is required. Write naturally and leave out identifying details.</p>
-
+        <h2 class="section-title">Ask privately</h2>
+        <p class="section-sub">No name is needed. Write naturally and leave out identifying details.</p>
         <div class="advice-card">
-          <div class="offer-strip">
-            <div class="offer free">
-              <strong>First short reply — Free</strong>
-              <span>A brief personal response to your situation.</span>
-            </div>
-            <div class="offer paid">
-              <strong>Detailed reply — €10</strong>
-              <span>A deeper written perspective with practical next steps.</span>
-            </div>
+          <div class="offer-strip" aria-label="Advice options">
+            <div class="offer"><strong>Quick Advice</strong><span class="price">€5</span><span>A short, thoughtful personal reply.</span><span class="time">First reply: within 24 service hours</span></div>
+            <div class="offer popular"><strong>Personal Advice</strong><span class="price">€10</span><span>A detailed reply + 1 follow-up reply within 7 days.</span><span class="time">First reply: within 12 service hours</span></div>
+            <div class="offer priority"><strong>Priority Advice</strong><span class="price">€20</span><span>In-depth reply + 2 follow-up replies within 15 days.</span><span class="time">First reply: within 6 service hours</span></div>
           </div>
+          <p class="service-note">First-reply targets begin once we have both your question and confirmed payment. Service hours: Monday–Friday, 09:00–18:00 Paris time (excluding public holidays). Follow-up periods begin when we send your first reply. Targets are not emergency guarantees.</p>
 
-          <form id="adviceForm">
+          <form id="adviceForm" novalidate>
             <label for="topic">Topic</label>
             <select id="topic" required>
               <option value="" disabled selected>Select a topic</option>
@@ -597,183 +577,261 @@
             </select>
 
             <label for="message">What is going on?</label>
-            <textarea
-              id="message"
-              required
-              maxlength="5000"
-              placeholder="Write what happened, what you are unsure about, and what you would like an outside opinion on..."
-            ></textarea>
-            <div class="hint">Avoid names, addresses, employers or other identifying details if you want to remain anonymous.</div>
+            <textarea id="message" required maxlength="3500" placeholder="Write what happened, what you are unsure about, and what you would like an outside opinion on..."></textarea>
+            <div class="hint">Avoid full names, addresses, employers and other identifying details. Please do not include passwords or financial account numbers.</div>
 
             <label for="email">Email for your private reply</label>
-            <input
-              id="email"
-              type="email"
-              autocomplete="email"
-              required
-              placeholder="your@email.com"
-            />
+            <input id="email" type="email" autocomplete="email" required placeholder="your@email.com" />
 
-            <div class="choice-grid" aria-label="Choose reply type">
-              <label class="choice">
-                <input type="radio" name="replyType" value="free" checked />
-                <span class="choice-content">
-                  <span class="choice-title">
-                    <span>Short reply</span>
-                    <span>Free</span>
-                  </span>
-                  <span class="choice-desc">A brief first personal perspective by email.</span>
-                </span>
-              </label>
-
-              <label class="choice">
-                <input type="radio" name="replyType" value="paid" />
-                <span class="choice-content">
-                  <span class="choice-title">
-                    <span>Detailed reply</span>
-                    <span>€10</span>
-                  </span>
-                  <span class="choice-desc">A longer response with deeper perspective and next steps.</span>
-                </span>
-              </label>
+            <label>Choose your reply</label>
+            <div class="choice-grid" role="radiogroup" aria-label="Choose reply type">
+              <label class="choice"><input type="radio" name="replyType" value="5" checked /><span class="choice-content"><span class="choice-title"><span>Quick</span><span>€5</span></span><span class="choice-desc">1 short reply · 24 service hours</span></span></label>
+              <label class="choice"><input type="radio" name="replyType" value="10" /><span class="choice-content"><span class="choice-title"><span>Personal</span><span>€10</span></span><span class="choice-desc">Detailed + 1 follow-up · 7 days</span></span></label>
+              <label class="choice"><input type="radio" name="replyType" value="20" /><span class="choice-content"><span class="choice-title"><span>Priority</span><span>€20</span></span><span class="choice-desc">In-depth + 2 follow-ups · 15 days</span></span></label>
             </div>
 
-            <div class="submit-row">
-              <button class="button button-primary" type="submit">Continue →</button>
-            </div>
+            <label class="checkline"><input type="checkbox" id="agree" required /><span>I agree to the <a href="#terms" class="open-detail">service terms</a> and have read the <a href="#privacy" class="open-detail">privacy information</a>.</span></label>
+            <label class="checkline"><input type="checkbox" id="earlyStart" required /><span>Please start my advice after payment, even within the 14-day cancellation period. I understand I lose that right once my purchased service is fully delivered.</span></label>
+
+            <div class="submit-row"><button class="button button-primary" type="submit">Continue →</button></div>
           </form>
 
           <div id="status" class="status" role="status" aria-live="polite"></div>
-
-          <div id="freeBox" class="next-box">
-            <h3>Your free request is ready</h3>
-            <p>Click below. Your email app will open with your request already filled in. Just press send.</p>
+          <div id="nextBox" class="next-box" aria-live="polite">
+            <h3 id="nextTitle">Your request is ready</h3>
+            <p id="nextInstructions"></p>
             <div class="next-actions">
-              <a id="freeEmailBtn" class="button button-primary" href="#">Send free request</a>
+              <a id="payBtn" class="button button-primary" target="_blank" rel="noopener noreferrer" href="#" hidden>Pay securely with PayPal</a>
+              <a id="emailBtn" class="button button-secondary" href="#">Open email app</a>
+              <button id="copyBtn" class="button button-secondary" type="button">Copy request</button>
             </div>
-          </div>
-
-          <div id="paidBox" class="next-box">
-            <h3>Detailed personal reply — €10</h3>
-            <p>Pay securely with PayPal, then send the prepared email request.</p>
-            <div class="next-actions">
-              <a id="payPayPal" class="button button-primary" href="https://www.paypal.com/ncp/payment/DYJF6RCXMV8YJ" target="_blank" rel="noopener noreferrer">Pay €10 with PayPal</a>
-              <a id="paidEmailBtn" class="button button-secondary" href="#">Send my request</a>
-            </div>
+            <p class="next-help" id="nextHelp"></p>
           </div>
         </div>
+        <p class="trust">This is general personal perspective, not medical, psychological, legal, financial or emergency advice. If you are in immediate danger, contact local emergency services.</p>
+      </section>
 
-        <p class="trust">
-          AnonymAdvice offers general personal perspective, not medical, psychological, legal, financial or emergency services.
-        </p>
+      <section class="section" id="trust">
+        <h2 class="section-title">Private by design</h2>
+        <p class="section-sub">No public stories, no account and no automatic chatbot. Every request is read personally.</p>
+        <div class="info-list">
+          <details id="privacy">
+            <summary>Privacy &amp; data</summary>
+            <p>We use your email address and question only to handle your request and send you a personal reply. We never publish your story without your permission. No account or public name is required.</p>
+            <p>The form itself does not send or store your message on this website: after you continue, you must open your email app and press Send. Your email provider and our email provider process the correspondence. Payment is handled by PayPal when you use its checkout.</p>
+            <p>Our policy is to delete advice emails from our active mailbox within 14 days after your conversation is complete. For packages with follow-ups, we wait until the follow-up period has ended. You can request earlier deletion by writing to <a href="mailto:contact@anonymadvice.com">contact@anonymadvice.com</a>. This process is currently handled manually.</p>
+            <p>We use Google Analytics only if you accept analytics cookies. You can change your preference using Cookie settings below.</p>
+          </details>
+          <details id="terms">
+            <summary>Service terms &amp; payments</summary>
+            <p>Advice is provided in English by email. It is a personal perspective, not therapy, crisis support or regulated professional advice. We may decline requests outside this scope; if you have paid and we decline your request, contact us for a refund.</p>
+            <p>Quick Advice (€5): one short reply. Personal Advice (€10): a detailed reply plus one additional reply about the same situation within 7 calendar days. Priority Advice (€20): an in-depth reply plus two additional replies about the same situation within 15 calendar days. Follow-up periods begin when we send the first reply. A new, unrelated question requires a new request.</p>
+            <p>First-reply turnaround targets apply during the service hours shown above, beginning once we receive both your question and confirmed payment. Follow-up replies may take longer. No subscriptions or recurring payments.</p>
+            <p>We generally do not refund a fully delivered advice service if you agreed to early delivery. Your legal withdrawal and refund rights still apply, including if we cannot deliver the service. If something goes wrong, email <a href="mailto:contact@anonymadvice.com">contact@anonymadvice.com</a>.</p>
+          </details>
+          <details id="legal">
+            <summary>Legal notice</summary>
+            <p>Contact: <a href="mailto:contact@anonymadvice.com">contact@anonymadvice.com</a>.</p>
+            <!-- ACTION REQUIRED BEFORE PAID LAUNCH: complete legally required operator identity, registration, contact/address and hosting information here, and provide the additional privacy/consumer information required in your jurisdiction. -->
+          </details>
+        </div>
       </section>
     </main>
 
     <footer>
-      <p><strong>AnonymAdvice</strong> — honest private perspective without a public post.</p>
-      <p>Contact: <a href="mailto:contact@anonymadvice.com">contact@anonymadvice.com</a></p>
-      <p>Anonymous means no account or public identity is required. Standard website analytics may collect technical information and approximate location.</p>
+      <p><strong>AnonymAdvice</strong> — personal perspective without a public post.</p>
+      <p class="footer-links">
+        <a href="#privacy" class="open-detail">Privacy</a>
+        <a href="#terms" class="open-detail">Service terms</a>
+        <a href="#legal" class="open-detail">Legal notice</a>
+        <button id="cookieSettings" class="text-button" type="button">Cookie settings</button>
+        <a href="mailto:contact@anonymadvice.com">Contact</a>
+      </p>
       <p>© <span id="year"></span> AnonymAdvice</p>
     </footer>
   </div>
 
+  <div id="cookieBanner" class="cookie-banner" role="region" aria-label="Analytics cookie preferences">
+    <p>Can we use Google Analytics cookies to understand website visits? Your choice does not affect the advice service. <a href="#privacy" class="open-detail">Privacy details</a>.</p>
+    <div class="cookie-actions">
+      <button id="rejectAnalytics" class="button button-secondary" type="button">Decline analytics</button>
+      <button id="acceptAnalytics" class="button button-primary" type="button">Accept analytics</button>
+    </div>
+  </div>
+
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const OWNER_EMAIL = "contact@anonymadvice.com";
-      const PAYPAL_URL = "https://www.paypal.com/ncp/payment/DYJF6RCXMV8YJ";
+    document.addEventListener('DOMContentLoaded', () => {
+      const OWNER_EMAIL = 'contact@anonymadvice.com';
+      // Fixed-price PayPal links. Payments are verified manually before advice begins.
+      const PLANS = {
+        '5':  { name: 'Quick Advice',    price: 5,  turnaround: '24 service hours', followups: 'No follow-up replies', paymentUrl: 'https://www.paypal.com/ncp/payment/ZKLXWHU9PMQ4W' },
+        '10': { name: 'Personal Advice', price: 10, turnaround: '12 service hours', followups: '1 follow-up reply within 7 days of the first reply', paymentUrl: 'https://www.paypal.com/ncp/payment/DYJF6RCXMV8YJ' },
+        '20': { name: 'Priority Advice', price: 20, turnaround: '6 service hours', followups: '2 follow-up replies within 15 days of the first reply', paymentUrl: 'https://www.paypal.com/ncp/payment/DZMNAKPQA7N3E' }
+      };
 
-      const form = document.getElementById("adviceForm");
-      const statusEl = document.getElementById("status");
-      const freeBox = document.getElementById("freeBox");
-      const paidBox = document.getElementById("paidBox");
-      const freeEmailBtn = document.getElementById("freeEmailBtn");
-      const paidEmailBtn = document.getElementById("paidEmailBtn");
-      const payPayPal = document.getElementById("payPayPal");
+      const form = document.getElementById('adviceForm');
+      const nextBox = document.getElementById('nextBox');
+      const nextTitle = document.getElementById('nextTitle');
+      const nextInstructions = document.getElementById('nextInstructions');
+      const nextHelp = document.getElementById('nextHelp');
+      const payBtn = document.getElementById('payBtn');
+      const emailBtn = document.getElementById('emailBtn');
+      const copyBtn = document.getElementById('copyBtn');
+      const statusEl = document.getElementById('status');
+      let pendingEmailText = '';
+      let currentPlanPrice = 0;
+      document.getElementById('year').textContent = new Date().getFullYear();
 
-      document.getElementById("year").textContent = new Date().getFullYear();
-      payPayPal.href = PAYPAL_URL;
-
+      // Analytics is an optional, informed opt-in. No GA request before acceptance.
+      const CONSENT_KEY = 'anonymadvice_analytics_consent_v1';
+      let gaLoaded = false;
+      function readConsent() {
+        try { return localStorage.getItem(CONSENT_KEY); } catch (_) { return null; }
+      }
+      function writeConsent(value) {
+        try { localStorage.setItem(CONSENT_KEY, value); } catch (_) { /* Browsers may block storage */ }
+      }
+      function enableAnalytics() {
+        if (gaLoaded) return;
+        gaLoaded = true;
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function(){ window.dataLayer.push(arguments); };
+        window.gtag('js', new Date());
+        window.gtag('config', 'G-SHG16C7HC1');
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-SHG16C7HC1';
+        document.head.appendChild(script);
+      }
       function analyticsEvent(name, params = {}) {
-        if (typeof gtag === "function") {
-          gtag("event", name, params);
+        if (readConsent() === 'accepted' && typeof window.gtag === 'function') {
+          window.gtag('event', name, params);
         }
       }
+      const cookieBanner = document.getElementById('cookieBanner');
+      const initialConsent = readConsent();
+      if (initialConsent === 'accepted') enableAnalytics();
+      if (initialConsent !== 'accepted' && initialConsent !== 'declined') cookieBanner.style.display = 'block';
+      document.getElementById('acceptAnalytics').addEventListener('click', () => {
+        writeConsent('accepted'); window['ga-disable-G-SHG16C7HC1'] = false; enableAnalytics(); cookieBanner.style.display = 'none';
+      });
+      document.getElementById('rejectAnalytics').addEventListener('click', () => {
+        writeConsent('declined');
+        // Disable future analytics hits and clear first-party GA cookies on this domain where possible.
+        window['ga-disable-G-SHG16C7HC1'] = true;
+        try {
+          for (const pair of document.cookie.split(';')) {
+            const name = pair.trim().split('=')[0];
+            if (/^_ga(?:_|$)/.test(name)) {
+              const expired = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
+              document.cookie = expired;
+              document.cookie = `${expired}; domain=.anonymadvice.com`;
+            }
+          }
+        } catch (_) { /* Cookie access may be blocked */ }
+        cookieBanner.style.display = 'none';
+      });
+      document.getElementById('cookieSettings').addEventListener('click', () => {
+        cookieBanner.style.display = 'block';
+      });
 
-      function buildMailto(type, topic, message, email) {
-        const paid = type === "paid";
-        const subject = encodeURIComponent(
-          `[AnonymAdvice] ${paid ? "Detailed €10 reply" : "Free short reply"} — ${topic}`
-        );
+      // Expand information accordions when a footer link is clicked.
+      document.querySelectorAll('a.open-detail').forEach(link => {
+        link.addEventListener('click', () => {
+          const panel = document.querySelector(link.getAttribute('href'));
+          if (panel?.tagName === 'DETAILS') panel.open = true;
+        });
+      });
 
-        const body = encodeURIComponent(
-`Reply type: ${paid ? "Detailed personal reply (€10)" : "First short personal reply (free)"}
-Topic: ${topic}
-Reply email: ${email}
-
-My situation:
-${message}
-
-${paid ? "Payment: I have paid €10 via PayPal (transaction ID: ...)" : "This is my first free short-reply request."}
-
-I prefer to remain anonymous.`
-        );
-
-        return `mailto:${OWNER_EMAIL}?subject=${subject}&body=${body}`;
+      function showStatus(message, warning = false) {
+        statusEl.textContent = message;
+        statusEl.className = warning ? 'status warn' : 'status';
+        statusEl.style.display = 'block';
+      }
+      function makeEmailContent(plan, topic, message, email, hasPayPalLink) {
+        const subject = `[AnonymAdvice] ${plan.name} (€${plan.price}) — ${topic}`;
+        const body = [
+          `Service: ${plan.name} (€${plan.price})`,
+          `First reply target: ${plan.turnaround} once the question and payment are received`,
+          `Included follow-ups: ${plan.followups}`,
+          `Topic: ${topic}`,
+          `Reply email: ${email}`,
+          '',
+          'My situation:',
+          message,
+          '',
+          hasPayPalLink
+            ? 'Payment: I will pay via PayPal. Transaction reference (if available): [add here]'
+            : `Please email me the secure €${plan.price} payment link. I understand advice begins after payment confirmation.`,
+          '',
+          'I agree to start the advice service after payment and understand that applicable withdrawal rights may end once the service is fully delivered.',
+          'I prefer to keep my name private.'
+        ].join('\n');
+        return { subject, body };
+      }
+      function makeMailto(subject, body) {
+        return `mailto:${OWNER_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       }
 
-      form.addEventListener("submit", (event) => {
+      form.addEventListener('submit', event => {
         event.preventDefault();
-
-        const topic = document.getElementById("topic").value;
-        const message = document.getElementById("message").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const replyType = document.querySelector('input[name="replyType"]:checked')?.value;
-
-        freeBox.style.display = "none";
-        paidBox.style.display = "none";
-        statusEl.style.display = "none";
-
-        if (!topic || !message || !email || !replyType) {
-          statusEl.textContent = "Please complete the topic, message and email.";
-          statusEl.className = "status warn";
-          statusEl.style.display = "block";
+        nextBox.style.display = 'none';
+        statusEl.style.display = 'none';
+        if (!form.reportValidity()) return;
+        const topic = document.getElementById('topic').value;
+        const message = document.getElementById('message').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const selected = form.querySelector('input[name="replyType"]:checked')?.value;
+        const plan = PLANS[selected];
+        if (!plan || !topic || !message || !email) {
+          showStatus('Please complete your topic, message and email.', true);
           return;
         }
-
-        analyticsEvent("advice_form_continue", {
-          advice_topic: topic,
-          reply_type: replyType
-        });
-
-        if (replyType === "free") {
-          freeEmailBtn.href = buildMailto("free", topic, message, email);
-          freeBox.style.display = "block";
-          statusEl.textContent = "Ready. Send the prepared email to receive your first short reply.";
-          statusEl.className = "status";
-          statusEl.style.display = "block";
-          analyticsEvent("free_reply_selected", { advice_topic: topic });
-          freeBox.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        currentPlanPrice = plan.price;
+        const hasPayPalLink = Boolean(plan.paymentUrl);
+        const mail = makeEmailContent(plan, topic, message, email, hasPayPalLink);
+        const mailto = makeMailto(mail.subject, mail.body);
+        pendingEmailText = `To: ${OWNER_EMAIL}\nSubject: ${mail.subject}\n\n${mail.body}`;
+        emailBtn.href = mailto;
+        nextTitle.textContent = `${plan.name} — €${plan.price}`;
+        if (hasPayPalLink) {
+          payBtn.hidden = false;
+          payBtn.style.display = 'inline-flex';
+          payBtn.href = plan.paymentUrl;
+          payBtn.textContent = `Pay €${plan.price} securely`;
+          nextInstructions.textContent = `1. Pay €${plan.price} securely with PayPal. 2. Return to this page, open your email app, add your PayPal transaction reference if possible, and press Send. Both steps are required.`;
+          nextHelp.textContent = 'Please keep this page open until you have paid and sent the email. Paying does not automatically send your question. If your email app does not open, copy the request and send it to contact@anonymadvice.com.';
         } else {
-          paidEmailBtn.href = buildMailto("paid", topic, message, email);
-          paidBox.style.display = "block";
-          statusEl.textContent = "Ready. Pay €10, then send the prepared email request.";
-          statusEl.className = "status";
-          statusEl.style.display = "block";
-          analyticsEvent("paid_reply_selected", { advice_topic: topic });
-          paidBox.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          payBtn.hidden = true;
+          payBtn.style.display = 'none';
+          payBtn.removeAttribute('href');
+          nextInstructions.textContent = `A €${plan.price} checkout link is not yet configured on this website. Open your email app below and send the prepared request; we will reply with a secure €${plan.price} PayPal payment link. Your advice starts after confirmed payment.`;
+          nextHelp.textContent = 'Your request is not submitted until you press Send in your email app. If it does not open, copy the request and email it to contact@anonymadvice.com.';
         }
+        nextBox.style.display = 'block';
+        showStatus('Your request is prepared. Please follow the instructions below; nothing has been sent yet.');
+        analyticsEvent('advice_form_continue', { reply_type: selected });
+        nextBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       });
-
-      freeEmailBtn.addEventListener("click", () => {
-        analyticsEvent("free_email_request_click");
-      });
-
-      paidEmailBtn.addEventListener("click", () => {
-        analyticsEvent("paid_email_request_click");
-      });
-
-      payPayPal.addEventListener("click", () => {
-        analyticsEvent("paypal_click", { value: 10, currency: "EUR" });
+      emailBtn.addEventListener('click', () => analyticsEvent('email_client_open_click'));
+      payBtn.addEventListener('click', () => analyticsEvent('paypal_link_click', { value: currentPlanPrice, currency: 'EUR' }));
+      copyBtn.addEventListener('click', async () => {
+        if (!pendingEmailText) return;
+        try {
+          await navigator.clipboard.writeText(pendingEmailText);
+          showStatus('Request copied. Paste it into an email to contact@anonymadvice.com, then send it.');
+        } catch (_) {
+          const temp = document.createElement('textarea');
+          temp.value = pendingEmailText;
+          temp.style.position = 'fixed';
+          temp.style.left = '-9999px';
+          document.body.appendChild(temp);
+          temp.select();
+          let copied = false;
+          try { copied = document.execCommand('copy'); } catch (_) { /* unsupported */ }
+          temp.remove();
+          showStatus(copied ? 'Request copied. Paste it into your email and send it.' : 'Copying was blocked by your browser. Please use Open email app.', !copied);
+        }
       });
     });
   </script>
